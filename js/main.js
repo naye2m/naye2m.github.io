@@ -28,8 +28,10 @@
 
 		if ( !isMobile.any() ) {
 			$('.js-fullheight').css('height', $(window).height());
+			$('#ContactForm').css('height', $(window).height());
 			$(window).resize(function(){
 				$('.js-fullheight').css('height', $(window).height());
+				$('#ContactForm').css('height', $(window).height());
 			});
 		}
 	};
@@ -116,8 +118,8 @@
 	};
 
 	var skillsWayPoint = function() {
-		if ($('#fh5co-skills').length > 0 ) {
-			$('#fh5co-skills').waypoint( function( direction ) {
+		if ($('#naye2m-skills').length > 0 ) {
+			$('#naye2m-skills').waypoint( function( direction ) {
 										
 				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
 					setTimeout( pieChart , 400);					
@@ -131,7 +133,7 @@
 
 	// Loading page
 	var loaderPage = function() {
-		$(".fh5co-loader").fadeOut("slow");
+		$(".naye2m-loader").fadeOut("slow");
 	};
 
 	

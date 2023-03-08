@@ -1,0 +1,61 @@
+/* #naye2m-box1 {
+    overflow: hidden;
+    
+    width: 180px ;
+} */
+#naye2m-box1:hover{
+    /* height: ; */
+    /* display: none; */
+    /* overflow: hidden; */
+    /* color: #ffffff00; */
+    background: #814900;
+    /* color: #ffeed7; */
+    /* border: 5px inherit #633800; */
+    border-radius: 0px;
+    font-weight: 100;
+    letter-spacing: 5px;
+
+}
+#naye2m-box1:active{
+    /* height: ; */
+    /* display: none; */
+    /* overflow: hidden; */
+    /* color: #ffffff00; */
+    background: #ff8f10;
+    color: #ffeed7;
+}
+#naye2m_AM::after{
+    content: "  ";
+}
+@media (max-width : 999px ) {
+    #naye2m_AM{
+        z-index: 5 ;
+        position: relative;
+    }
+    #naye2m-about .col-md-8 > h2 {
+        display: inline-block;
+    }
+}
+#naye2m_AM_n2{
+    cursor: grab ;
+}
+h2:hover{
+    animation-name: flip;
+}
+.naye2m-social-icons>li>a> i:hover {
+    animation-name: zoomIn;
+}
+.naye2m-social-icons>li>a i{
+    animation-name: zoomOut;
+    
+}
+html{
+    scroll-behavior: smooth ;
+}
+#ContactForm{
+    min-width: 100% ;
+    min-height: fit-content;
+    overflow: hidden;
+    width: fit-content;
+    height: 100vh;
+}
