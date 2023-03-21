@@ -13,23 +13,88 @@ function create_random_string(string_length = 15) {
   return random_string;
 }
 const CRS = create_random_string;
-function intrval_func() {
-  for (let i = 0; i < 20; i++) {
-	;
-    if (i < 1) {
-      setTimeout( document.getElementById("Naye2m-nameBlock").innerText = CRS(15), 250 * i);
-	  random_string = ""
-    } else {
-      if (i == 8){ setTimeout(() => {
-		document.getElementById("Naye2m-nameBlock").innerText ="Muhammad Nayeem"
-	  }, 2000);};
-    }
-  }
-}
+/* -- Glow effect -- */
 
-var nameChengingInt = setInterval(() => {
-	intrval_func()
-}, 30000);
+// const blob = document.getElementById("blob");
+
+// window.onpointermove = event => { 
+//   const { clientX, clientY } = event;
+  
+//   blob.animate({
+//     left: `${clientX}px`,
+//     top: `${clientY}px`
+//   }, { duration: 3000, fill: "forwards" });
+// }
+
+/* -- Text effect -- */
+
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+let nameChenginhInterval = null;
+
+document.getElementById("Naye2m-nameBlock").onmouseover = event => {  
+  let iteration = 0;
+  
+  clearInterval(nameChenginhInterval);
+  
+  nameChenginhInterval = setInterval(() => {
+    event.target.innerText = event.target.innerText
+      .split("")
+      .map((letter, index) => {
+        if(index < iteration) {
+          return event.target.dataset.value[index];
+        }
+      
+        return letters[Math.floor(Math.random() * 26)]
+      })
+      .join("");
+    
+    if(iteration >= event.target.dataset.value.length){ 
+      clearInterval(nameChenginhInterval);
+    }
+    
+    iteration += 1 / 2;
+  }, 30);
+}
+var nameChenginhInterval2 = setInterval(() => {
+  let iteration = 0;
+  
+  clearInterval(nameChenginhInterval);
+  
+  nameChenginhInterval = setInterval(() => {
+    document.getElementById("Naye2m-nameBlock").innerText = document.getElementById("Naye2m-nameBlock").innerText
+      .split("")
+      .map((letter, index) => {
+        if(index < iteration) {
+          return document.getElementById("Naye2m-nameBlock").dataset.value[index];
+        }
+      
+        return letters[Math.floor(Math.random() * 26)]
+      })
+      .join("");
+    
+    if(iteration >= document.getElementById("Naye2m-nameBlock").dataset.value.length){ 
+      clearInterval(nameChenginhInterval);
+    }
+    
+    iteration += 1 / 2;
+  }, 30);
+},3000)
+
+// var nameChengingInt = setInterval(() => {
+	
+//   for (let i = 0; i < 20; i++) {
+    
+//       if (i < 1) {
+//         setTimeout( document.getElementById("Naye2m-nameBlock").innerText = CRS(15), 250 * i);
+//       random_string = ""
+//       } else {
+//         if (i == 8){ setTimeout(() => {
+//       document.getElementById("Naye2m-nameBlock").innerText ="Muhammad Nayeem"
+//       }, 2000);};
+//       }
+//     }  
+// }, 30000);
 var d = new Date();
 var c1 = d.getFullYear() + d.getMonth() + d.getDate()
 function naye2m_direct(input = prompt("SUMYMDH")) {
