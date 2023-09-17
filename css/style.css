@@ -18,7 +18,9 @@ body {
   color: #4d4d4d;
   background: #fff;
 }
-
+.justi{
+  text-align: justify;
+}
 #page {
   position: relative;
   overflow-x: hidden;
