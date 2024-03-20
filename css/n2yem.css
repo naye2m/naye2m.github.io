@@ -70,6 +70,49 @@ html {
     height: 100vh;
 }
 
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1 ;
+
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+@media screen and (min-width: 480px) and (orientation: landscape) {
+    #blob {
+        background-color: white;
+        height: clamp(50px, 35vmax, 150px);
+        z-index: -1;
+        aspect-ratio: 1;
+        position: fixed;
+        left: -50%;
+        top: -50%;
+        translate: -50% -50%;
+        border-radius: 50%;
+        background: linear-gradient(to right, aquamarine, mediumpurple);
+        /* background: radial-gradient(closest-side, #f69d3c, #ebf8e1);         */
+        animation: rotate 20s infinite;
+        opacity: 0.3;
+        /* backdrop-filter: blur(12vmax); */
+    }
+
+    #blur {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        backdrop-filter: blur(12vmax);
+    }
+}
+
+
 @media screen and (max-width: 480px) and (orientation: portrait) {
 
     /* *:not([class^="icon-"]) {
