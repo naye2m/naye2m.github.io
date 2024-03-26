@@ -17,87 +17,91 @@ const CRS = create_random_string;
 
 const blob = document.getElementById("blob");
 
-window.onpointermove = event => {
-  if (event.buttons)
-  console.log(event);
+// TODO for portait
+// window.ontouchend = event => blobMove(event)
+window.onpointermove = event => blobMove(event)
+function blobMove(event) {
   const { clientX, clientY } = event;
-
   blob.animate({
-    opacity: event.buttons == 1? 1 : 0.4,
+    opacity: event.buttons == 1 ? 1 : 0.4,
     left: `${clientX}px`,
     top: `${clientY}px`
   }, { duration: 2000, fill: "forwards" });
+blob.animate({
+    opacity: 0,
+  }, { duration: 5000, fill: "forwards" });
 }
 
 /* -- Text effect -- */
 
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-let nameChenginhInterval = null;
+class Text_glitch_effect {
+  constructor(htmlelem, textsArr = null, iterationPS = 2, mouseEvent = true, intervalinms = 1800) {
+    this.element = htmlelem;
+    this.texts = textsArr ? textsArr : [this.element.innerText];
+    this.iterationI = 1 / iterationPS;
+    this.mouseEvent = mouseEvent;
+    this.intervalinms = intervalinms;
+    if (mouseEvent || intervalinms)
+      this.setup()
+  }
+  currentTxtIdx = 0
+  nameChenginhInterval = null;
 
-document.getElementById("Naye2m-nameBlock").onmouseover = event => {
-  let iteration = 0;
+  getNextText(texts = this.texts) {
+    return texts[this.currentTxtIdx = ++this.currentTxtIdx % texts.length]
+  }
+  chengeText(elem = this.element, nextTxt = this.getNextText()) {
+    try {
+      let iteration = 0;
+      // console.log(nextTxt)
 
-  clearInterval(nameChenginhInterval);
+      clearInterval(this.nameChenginhInterval);
 
-  nameChenginhInterval = setInterval(() => {
-    event.target.innerText = event.target.innerText
-      .split("")
-      .map((letter, index) => {
-        if (index < iteration) {
-          return event.target.dataset.value[index];
+      this.nameChenginhInterval = setInterval(() => {
+        elem.innerText = nextTxt
+          .split("")
+          .map((letter, index) => {
+            if (index < iteration) {
+              return nextTxt[index];
+            }
+            return LETTERS[Math.floor(Math.random() * 25.99999999999)]
+          })
+          .join("");
+
+        if (iteration >= nextTxt.length) {
+          clearInterval(this.nameChenginhInterval);
         }
 
-        return letters[Math.floor(Math.random() * 26)]
-      })
-      .join("");
-
-    if (iteration >= event.target.dataset.value.length) {
-      clearInterval(nameChenginhInterval);
+        iteration += this.iterationI;
+      }, 30);
+    } catch (e) {
+      console.error(e);
+      clearInterval(this.nameChenginhInterval)
     }
+  }
+  setup() {
+    if (this.mouseEvent)
+      this.element.onmouseover = event => this.chengeText()
+    if (this.intervalinms)
+      this.repeatinginterval = setInterval(() => this.chengeText(), this.intervalinms)
 
-    iteration += 1 / 2;
-  }, 30);
+  }
 }
-var nameChenginhInterval2 = setInterval(() => {
-  let iteration = 0;
+const nameblock = document.getElementById("Naye2m-nameBlock");
+const texts = [nameblock.innerText, nameblock.dataset.value, "MUhammad", "Nayeem", "abcd", "abcdefghijk"];
+const nameblockeff = new Text_glitch_effect(nameblock, texts, 2, true, 10000);
+let jobLists = [
+  "Website Devloper",
+  "Programmer",
+  "UI/UX Designer",
+  "Dot NET | C# Devloper",
+  "Basic Animator",
+  "3D Design",
+]
+const jobTitleeff = new Text_glitch_effect(document.getElementById("job-description"), jobLists, 4, false, 3000);
 
-  clearInterval(nameChenginhInterval);
-
-  nameChenginhInterval = setInterval(() => {
-    document.getElementById("Naye2m-nameBlock").innerText = document.getElementById("Naye2m-nameBlock").innerText
-      .split("")
-      .map((letter, index) => {
-        if (index < iteration) {
-          return document.getElementById("Naye2m-nameBlock").dataset.value[index];
-        }
-
-        return letters[Math.floor(Math.random() * 26)]
-      })
-      .join("");
-
-    if (iteration >= document.getElementById("Naye2m-nameBlock").dataset.value.length) {
-      clearInterval(nameChenginhInterval);
-    }
-
-    iteration += 1 / 2;
-  }, 30);
-}, 3000)
-
-// var nameChengingInt = setInterval(() => {
-
-//   for (let i = 0; i < 20; i++) {
-
-//       if (i < 1) {
-//         setTimeout( document.getElementById("Naye2m-nameBlock").innerText = CRS(15), 250 * i);
-//       random_string = ""
-//       } else {
-//         if (i == 8){ setTimeout(() => {
-//       document.getElementById("Naye2m-nameBlock").innerText ="Muhammad Nayeem"
-//       }, 2000);};
-//       }
-//     }  
-// }, 30000);
 var d = new Date();
 var c1 = d.getFullYear() + d.getMonth() + d.getDate()
 function naye2m_direct(input = prompt("SUMYMDH")) {

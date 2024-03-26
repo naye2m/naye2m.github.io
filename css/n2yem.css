@@ -76,7 +76,7 @@ html {
     }
 
     50% {
-        scale: 1 ;
+        scale: 1;
 
     }
 
@@ -172,4 +172,8 @@ hr {
     50% {
         filter: hue-rotate(360deg);
     }
+}
+
+:has(#job-description){
+    margin-bottom: 14px !important;
 }
