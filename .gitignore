@@ -2,5 +2,7 @@
 from github/
 other directories files
 .htaccess
-*.html
 responds/datas.db
+.vscode
+*.db
+note.txt

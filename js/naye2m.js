@@ -27,7 +27,7 @@ function blobMove(event) {
     left: `${clientX}px`,
     top: `${clientY}px`
   }, { duration: 2000, fill: "forwards" });
-blob.animate({
+  blob.animate({
     opacity: 0,
   }, { duration: 5000, fill: "forwards" });
 }
@@ -37,18 +37,18 @@ blob.animate({
 const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 class Text_glitch_effect {
-  constructor(htmlelem, textsArr = null, iterationPS = 2, mouseEvent = true, intervalinms = 1800) {
+  constructor(htmlelem, textsArr = null, iterationPS = 2, mouseEvent = true, intervalinms = 1800, randomstrs = " ") {
     this.element = htmlelem;
     this.texts = textsArr ? textsArr : [this.element.innerText];
     this.iterationI = 1 / iterationPS;
     this.mouseEvent = mouseEvent;
     this.intervalinms = intervalinms;
+    this.randomstrs = randomstrs
     if (mouseEvent || intervalinms)
       this.setup()
   }
   currentTxtIdx = 0
   nameChenginhInterval = null;
-
   getNextText(texts = this.texts) {
     return texts[this.currentTxtIdx = ++this.currentTxtIdx % texts.length]
   }
@@ -66,7 +66,7 @@ class Text_glitch_effect {
             if (index < iteration) {
               return nextTxt[index];
             }
-            return LETTERS[Math.floor(Math.random() * 25.99999999999)]
+            return this.randomstrs ? this.randomstrs[Math.floor(Math.random() * (this.randomstrs.length - 0.0000001))] : nextTxt[Math.floor(Math.random() * (nextTxt.length - 0.0000001))]
           })
           .join("");
 
@@ -90,17 +90,18 @@ class Text_glitch_effect {
   }
 }
 const nameblock = document.getElementById("Naye2m-nameBlock");
-const texts = [nameblock.innerText, nameblock.dataset.value, "MUhammad", "Nayeem", "abcd", "abcdefghijk"];
-const nameblockeff = new Text_glitch_effect(nameblock, texts, 2, true, 10000);
+const texts = [nameblock.innerText, nameblock.dataset.value, nameblock.dataset.value.toUpperCase(), "Nayeem"];
+const nameblockeff = new Text_glitch_effect(nameblock, texts, 2, true, 10000, "!@#$%^&*()+_=-");
+// <                                                                        
 let jobLists = [
   "Website Devloper",
   "Programmer",
   "UI/UX Designer",
   "Dot NET | C# Devloper",
   "Basic Animator",
-  "3D Design",
+  "3D Designer",
 ]
-const jobTitleeff = new Text_glitch_effect(document.getElementById("job-description"), jobLists, 4, false, 3000);
+const jobTitleeff = new Text_glitch_effect(document.getElementById("job-description"), jobLists, 3, false, 3000);
 
 var d = new Date();
 var c1 = d.getFullYear() + d.getMonth() + d.getDate()
