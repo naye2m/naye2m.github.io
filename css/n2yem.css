@@ -3,7 +3,7 @@
     
     width: 180px ;
 } */
-#naye2m-box1:hover{
+#naye2m-box1:hover {
     /* height: ; */
     /* display: none; */
     /* overflow: hidden; */
@@ -16,7 +16,8 @@
     letter-spacing: 5px;
 
 }
-#naye2m-box1:active{
+
+#naye2m-box1:active {
     /* height: ; */
     /* display: none; */
     /* overflow: hidden; */
@@ -24,38 +25,151 @@
     background: #ff8f10;
     color: #ffeed7;
 }
-#naye2m_AM::after{
+
+#naye2m_AM::after {
     content: "  ";
 }
-@media (max-width : 999px ) {
-    #naye2m_AM{
-        z-index: 5 ;
+
+@media (max-width : 999px) {
+    #naye2m_AM {
+        z-index: 5;
         position: relative;
     }
-    #naye2m-about .col-md-8 > h2 {
+
+    #naye2m-about .col-md-8>h2 {
         display: inline-block;
     }
 }
-#naye2m_AM_n2{
-    cursor: grab ;
+
+#naye2m_AM_n2 {
+    cursor: grab;
 }
-h2:hover{
+
+h2:hover {
     animation-name: flip;
 }
-.naye2m-social-icons>li>a> i:hover {
+
+.naye2m-social-icons>li>a>i:hover {
     animation-name: zoomIn;
 }
-.naye2m-social-icons>li>a i{
+
+.naye2m-social-icons>li>a i {
     animation-name: zoomOut;
-    
+
 }
-html{
-    scroll-behavior: smooth ;
+
+html {
+    scroll-behavior: smooth;
 }
-#ContactForm{
-    min-width: 100% ;
+
+#ContactForm {
+    min-width: 100%;
     min-height: fit-content;
     overflow: hidden;
     width: fit-content;
     height: 100vh;
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1 ;
+
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+@media screen and (min-width: 480px) and (orientation: landscape) {
+    #blob {
+        background-color: white;
+        height: clamp(50px, 35vmax, 150px);
+        z-index: -1;
+        aspect-ratio: 1;
+        position: fixed;
+        left: -50%;
+        top: -50%;
+        translate: -50% -50%;
+        border-radius: 50%;
+        background: linear-gradient(to right, aquamarine, mediumpurple);
+        /* background: radial-gradient(closest-side, #f69d3c, #ebf8e1);         */
+        animation: rotate 20s infinite;
+        opacity: 0.3;
+        /* backdrop-filter: blur(12vmax); */
+    }
+
+    #blur {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        backdrop-filter: blur(12vmax);
+    }
+}
+
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+
+    /* *:not([class^="icon-"]) {
+        font-size: 110% !important;
+    }
+    #naye2m-header .display-tc h1 span, .naye2m-cover .display-tc h1 span{
+        font-size: 80% ;
+    } */
+    body>* {
+        font-size: 70%;
+    }
+
+    body #naye2m-header * {
+        font-size: 70%;
+    }
+}
+
+/* ! scroll bar  */
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 34px;
+    width: 75%;
+    border: 0;
+    border-top: 2px solid #ff900099;
+}
+
+/*here you can get code for the responsive scroll bar*/
+::-webkit-scrollbar {
+    width: 6px;
+
+    &:hover {
+        width: 10px;
+    }
+}
+
+::-webkit-scrollbar-track {
+    background: #ff900055;
+    opacity: 0.5;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    width: 6px;
+    margin: 0 2px;
+    background: linear-gradient(to top, #ff9000, #ff900088);
+    animation: animatecol 3s ease-in-out infinite;
+}
+
+@keyframes animatecol {
+
+    0%,
+    100% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(360deg);
+    }
 }
