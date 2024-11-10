@@ -19,7 +19,7 @@ const blob = document.getElementById("blob");
 
 // TODO for portait
 // window.ontouchend = event => blobMove(event)
-window.onpointermove = event => blobMove(event)
+window.onpointermove = blobMove
 function blobMove(event) {
   const { clientX, clientY } = event;
   blob.animate({
