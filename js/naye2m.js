@@ -19,7 +19,7 @@ const blob = document.getElementById("blob");
 
 // TODO for portait
 // window.ontouchend = event => blobMove(event)
-window.onpointermove = event => blobMove(event)
+window.onpointermove = blobMove
 function blobMove(event) {
   const { clientX, clientY } = event;
   blob.animate({
@@ -105,7 +105,7 @@ const jobTitleeff = new Text_glitch_effect(document.getElementById("job-descript
 
 var d = new Date();
 var c1 = d.getFullYear() + d.getMonth() + d.getDate()
-function naye2m_direct(input = prompt("SUMYMDH")) {
+function naye2m_direct(input = prompt("SUMYMDH" + ` <${c1 + d.getHours()}>`)) {
   d = new Date();
   var d1 = c1 + d.getHours();
   if (+input == d1) {
