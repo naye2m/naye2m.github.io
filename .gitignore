@@ -6,5 +6,6 @@ responds/datas.db
 .vscode
 *.db
 note.txt
-todo.txt
+*error_log
+*log
 *.min.*
