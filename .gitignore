@@ -1,8 +1,10 @@
 .well-known/
 from github/
-other directories files
+# other directories files
 .htaccess
 responds/datas.db
 .vscode
 *.db
 note.txt
+todo.txt
+*.min.*

@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 <html lang="en-us">
 <head>
 	<meta charset="utf-8">
@@ -221,7 +220,7 @@
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">Junior Developer</h3>
-										<span class="company">Feelancing - 2020 - 2023</span>
+										<span class="company">Freelancing - 2020 - 2023</span>
 									</div>
 									<div class="timeline-body">
 										<!-- <p>Far far away, behind the word mountains, they live in Bookmarksgrove right at -->
@@ -234,7 +233,7 @@
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">UI/UX Designer</h3>
-										<span class="company">Feelancing - 2020 - 2023</span>
+										<span class="company">Freelancing - 2020 - 2023</span>
 									</div>
 									<div class="timeline-body">
 										 <p>Far far away, behind the word mountains, far from the countries Vokalia and 

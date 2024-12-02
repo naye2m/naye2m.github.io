@@ -174,7 +174,25 @@ hr {
     }
 }
 
+@-webkit-keyframes animatecol {
+
+    0%,
+    100% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+
 h3:has(#job-description){
     margin-bottom: 14px !important;
     height: 16px;
+}
+
+
+/* todo : correct this problem */
+#naye2m-about>div>div:nth-child(2)>div.col-md-8>p {
+    text-align: justify;
 }
