@@ -1537,4 +1537,38 @@ input[type='text'] {
   opacity: 0;
 }
 
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 34px;
+  width: 75%;
+  border: 0;
+  border-top: 2px solid #ff900099;
+}
+/*here you can get code for the responsive scroll bar*/
+::-webkit-scrollbar{
+  width:6px;
+  &:hover{width: 10px;}
+}
+::-webkit-scrollbar-track{
+   background: #ff900055;
+   opacity : 0.5;
+}
+::-webkit-scrollbar-thumb{
+  border-radius:5px;
+  width:6px;
+  margin:0 2px;
+background: linear-gradient(to top, #ff9000,#ff900088);
+  animation: animate 3s ease-in-out infinite;
+}
+@keyframes animate{
+  0%,100%{
+      filter: hue-rotate(0deg);
+  }
+  50%{
+      filter: hue-rotate(360deg);
+  }
+}
+
+
 /*# sourceMappingURL=style.css.map */
