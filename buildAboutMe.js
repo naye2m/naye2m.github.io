@@ -89,7 +89,6 @@ let data = {
     },
     names: [
         "Muhammad Nayeem",
-        // "Muhammad Nayeem",
         "MUHAMMAD NAYEEM",
         "Nayeem",
     ],
@@ -120,7 +119,7 @@ let data = {
         portfolio_link: "https://moontreee.com",
         github_link: "https://github.com/naye2m",
     },
-    about_meCK: {
+    about_me: {
         introduction:
             "Hello! I'm Muhammad Nayeem, a Full Stack Developer with expertise in both front-end and back-end technologies. I am passionate about creating responsive, user-friendly web applications. I have worked on various projects, including building dynamic websites, games, and utilities. I always seek to improve my skills and contribute to meaningful projects.",
         experience:
@@ -143,103 +142,114 @@ let data = {
             },
         ], JavaScript_certifications: [
             {
-                name: "Animations I in JavaScript",
+                name: "Animations I",
                 date: "12-02-2021",
                 issued_by: "Grasshopper - Google",
-                validation_link: "https://grasshopper.app/certificates",//!offline //? update
+                validation_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Animations.pdf",
+                image_link:"https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/animations.jpg",
                 file_link: "",
                 valid_until: null,
                 description:
                     "Learned JavaScript animations to enhance user interfaces.",
             },
             {
-                name: "Animations II in JavaScript",
+                name: "Animations II",
                 date: "14-02-2021",
                 issued_by: "Grasshopper - Google",
-                validation_link: "https://grasshopper.app/certificates",//!offline //? update
+                validation_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Animations_II.pdf",
+                image_link:"https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/animations_II.jpg",
                 file_link: "",
                 valid_until: null,
                 description: "Advanced knowledge in JavaScript animations.",
             },
             {
-                name: "Array Methods in JavaScript",
+                name: "Array Methods",
                 date: "12-02-2021",
                 issued_by: "Grasshopper - Google",
-                validation_link: "https://grasshopper.app/certificates",//!offline //? update
+                validation_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/Array_Methods.jpg",
+                image_link:"https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/Array_Methods.jpg",
                 file_link: "",
                 valid_until: null,
                 description:
                     "Mastered array methods in JavaScript for better data manipulation.",
             },
-            {
-                name: "Automation in JavaScript",
-                date: "01-06-2022",
-                issued_by: "Grasshopper - Google",
-                validation_link: "https://grasshopper.app/certificates",//!offline //? update
-                file_link: "",
-                valid_until: null,
-                description: "Gained expertise in automating tasks using JavaScript.",
-            },
+            // {
+            //     name: "Automation",
+            //     date: "01-06-2022",
+            //     issued_by: "Grasshopper - Google",
+            //     validation_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/",
+            //     image_link:"",
+            //     file_link: "",
+            //     valid_until: null,
+            //     description: "Gained expertise in automating tasks using JavaScript.",
+            // },
             {
                 name: "Automation With Google Apps in Google Script",
                 date: "01-06-2022",
                 issued_by: "Grasshopper - Google",
-                validation_link: "https://grasshopper.app/certificates",//!offline //? update
+                validation_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Automation.pdf",
+                image_link:"https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Automation.png",
                 file_link: "",
                 valid_until: null,
                 description: "Learned to automate tasks using Google Apps Script.",
             },
             {
-                name: "Coding Fundamentals in JavaScript",
-                date: "04-02-2021",
+                name: "Coding Fundamentals",
+                date: "09-12-2020",
                 issued_by: "Grasshopper - Google",
-                validation_link: "https://grasshopper.app/certificates",//!offline //? update
+                validation_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Coding_Fundamentals.pdf",
+                image_link:"https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/Coding_fundamentals.jpg",
                 file_link: "",
                 valid_until: null,
                 description: "Acquired a strong foundation in JavaScript basics.",
             },
             {
-                name: "Coding Fundamentals II in JavaScript",
-                date: "09-12-2020",
+                name: "Coding Fundamentals II",
+                date: "04-02-2021",
                 issued_by: "Grasshopper - Google",
-                validation_link: "https://grasshopper.app/certificates",//!offline //? update
+                validation_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Coding_Fundamentals_II.pdf",
+                image_link:"https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/Coding_fundamental_II.jpg",
                 file_link: "",
                 valid_until: null,
                 description: "Deepened knowledge in JavaScript fundamentals.",
             },
             {
-                name: "Debugging Code in JavaScript",
+                name: "Debugging Code",
                 date: "15-05-2022",
                 issued_by: "Grasshopper - Google",
-                validation_link: "https://grasshopper.app/certificates",//!offline //? update
+                validation_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Debugging_Code.pdf",
+                image_link:"https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/Debugging_Code.jpg",
                 file_link: "",
                 valid_until: null,
                 description: "Developed skills for debugging JavaScript code.",
             },
             {
-                name: "Intro to Interviewing in JavaScript",
+                name: "Intro to Interviewing",
                 date: "10-02-2021",
                 issued_by: "Grasshopper - Google",
-                validation_link: "https://grasshopper.app/certificates",//!offline //? update
+                validation_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Intro_to_Interviewing.pdf",
+                image_link:"https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/intro_to_interviewing.jpg",
                 file_link: "",
                 valid_until: null,
                 description: "Prepared for JavaScript-related job interviews.",
             },
             {
-                name: "Intro to Webpages in JavaScript",
+                name: "Intro to Webpages",
                 date: "01-06-2022",
                 issued_by: "Grasshopper - Google",
-                validation_link: "https://grasshopper.app/certificates",//!offline //? update
+                validation_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Intro_to_Webpages.pdf",
+                image_link:"https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Intro_to_Webpages.png",
                 file_link: "",
                 valid_until: null,
                 description:
                     "Learned how to build and manage webpages using JavaScript.",
             },
             {
-                name: "Using a Code Editor in JavaScript",
+                name: "Using a Code Editor",
                 date: "01-06-2022",
                 issued_by: "Grasshopper - Google",
-                validation_link: "https://grasshopper.app/certificates",//!offline //? update
+                validation_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Using_A_Code_Editor.pdf",
+                image_link:"https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Using_A_Code_Editor.png",
                 file_link: "",
                 valid_until: null,
                 description:
@@ -440,7 +450,7 @@ let data = {
         ], others: [
         ],
     },
-    skillsCK: {
+    skills: {
         programming_languages: [
             {
                 name: "Python",
@@ -815,3 +825,5 @@ function build() {
     }
 
 }
+
+build();
