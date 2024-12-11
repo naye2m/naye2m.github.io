@@ -1,13 +1,19 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon/icomoon.eot?srf3rx");
+  src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 #naye2m-box1:hover {
-  background: #814900;
+  background: #804800;
   border-radius: 0px;
   font-weight: 100;
   letter-spacing: 5px;
 }
-
 #naye2m-box1:active {
-  background: #ff8f10;
-  color: #ffeed7;
+  background: #cc7300;
+  color: #ffc880;
 }
 
 #naye2m_AM::after {
@@ -34,7 +40,6 @@ h2:hover {
 .naye2m-social-icons > li > a > i:hover {
   animation-name: zoomIn;
 }
-
 .naye2m-social-icons > li > a i {
   animation-name: zoomOut;
 }
@@ -102,49 +107,13 @@ hr {
   border-top: 2px solid rgba(255, 144, 0, 0.6);
 }
 
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar:hover {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(255, 144, 0, 0.3333333333);
-  opacity: 0.5;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  width: 6px;
-  margin: 0 2px;
-  background: linear-gradient(to top, #ff9000, rgba(255, 144, 0, 0.5333333333));
-  animation: animatecol 3s ease-in-out infinite;
-}
-
-@keyframes animatecol {
-  0%, 100% {
-    filter: hue-rotate(0deg);
-  }
-  50% {
-    filter: hue-rotate(360deg);
-  }
-}
-@-webkit-keyframes animatecol {
-  0%, 100% {
-    filter: hue-rotate(0deg);
-  }
-  50% {
-    filter: hue-rotate(360deg);
-  }
-}
-h3:has(#job-description) {
-  margin-bottom: 14px !important;
-  height: 16px;
-}
-
 #naye2m-about > div > div:nth-child(2) > div.col-md-8 > p {
   text-align: justify;
+}
+#naye2m-about > div > div:nth-child(2) > div.col-md-8 > p:has(> strong):has(+ ul) {
+  margin: 0;
+  margin-top: 10px;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=n2yem.css.map */

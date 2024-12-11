@@ -1,29 +1,42 @@
+@use "sass:color";
+@import "variables.scss";
 
-#naye2m-box1:hover {
-    background: #814900;
-    border-radius: 0px;
-    font-weight: 100;
-    letter-spacing: 5px;
 
+
+#naye2m-box1 {
+    &:hover {
+        // background: hsl(32, 100%, 25%);
+        background: color.adjust($brand-primary, $lightness: -25%);
+        border-radius: 0px;
+        font-weight: 100;
+        letter-spacing: 5px;
+    }
+
+    &:active {
+        // background: hsl(32, 100%, 53%);
+        background: color.adjust($brand-primary, $lightness: -10%);
+        color: color.adjust($brand-primary,$lightness: 25%);
+    }
 }
 
-#naye2m-box1:active {
-    background: #ff8f10;
-    color: #ffeed7;
+#naye2m_AM {
+    &::after {
+        content: "  ";
+    }
 }
 
-#naye2m_AM::after {
-    content: "  ";
-}
-
-@media (max-width : 999px) {
+@media (max-width: 999px) {
     #naye2m_AM {
         z-index: 5;
         position: relative;
     }
 
-    #naye2m-about .col-md-8>h2 {
-        display: inline-block;
+    #naye2m-about {
+        .col-md-8 {
+            > h2 {
+                display: inline-block;
+            }
+        }
     }
 }
 
@@ -31,17 +44,26 @@
     cursor: grab;
 }
 
-h2:hover {
-    animation-name: flip;
+h2 {
+    &:hover {
+        animation-name: flip;
+    }
 }
 
-.naye2m-social-icons>li>a>i:hover {
-    animation-name: zoomIn;
-}
+.naye2m-social-icons {
+    > li {
+        > a {
+            > i {
+                &:hover {
+                    animation-name: zoomIn;
+                }
+            }
 
-.naye2m-social-icons>li>a i {
-    animation-name: zoomOut;
-
+            i {
+                animation-name: zoomOut;
+            }
+        }
+    }
 }
 
 html {
@@ -63,7 +85,6 @@ html {
 
     50% {
         scale: 1;
-
     }
 
     to {
@@ -85,6 +106,7 @@ html {
         background: linear-gradient(to right, aquamarine, mediumpurple);
         animation: rotate 20s infinite;
         opacity: 0.3;
+        
     }
 
     #blur {
@@ -96,14 +118,17 @@ html {
     }
 }
 
-
 @media screen and (max-width: 480px) and (orientation: portrait) {
-    body>* {
-        font-size: 70%;
-    }
+    body {
+        > * {
+            font-size: 70%;
+        }
 
-    body #naye2m-header * {
-        font-size: 70%;
+        #naye2m-header {
+            * {
+                font-size: 70%;
+            }
+        }
     }
 }
 
@@ -113,60 +138,23 @@ hr {
     height: 34px;
     width: 75%;
     border: 0;
-    border-top: 2px solid #ff900099;
+    border-top: 2px solid rgba($brand-primary,0.6);
 }
 
-::-webkit-scrollbar {
-    width: 6px;
-
-    &:hover {
-        width: 10px;
+#naye2m-about {
+    > div {
+        > div:nth-child(2) {
+            > div.col-md-8 {
+                > p {
+                    text-align: justify;
+                    &:has(>strong):has(+ul){
+                        margin: 0;
+                        margin-top: 10px;
+                        text-decoration: underline;
+                
+                    }
+                }
+            }
+        }
     }
-}
-
-::-webkit-scrollbar-track {
-    background: #ff900055;
-    opacity: 0.5;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    width: 6px;
-    margin: 0 2px;
-    background: linear-gradient(to top, #ff9000, #ff900088);
-    animation: animatecol 3s ease-in-out infinite;
-}
-
-@keyframes animatecol {
-
-    0%,
-    100% {
-        filter: hue-rotate(0deg);
-    }
-
-    50% {
-        filter: hue-rotate(360deg);
-    }
-}
-
-@-webkit-keyframes animatecol {
-
-    0%,
-    100% {
-        filter: hue-rotate(0deg);
-    }
-
-    50% {
-        filter: hue-rotate(360deg);
-    }
-}
-
-h3:has(#job-description){
-    margin-bottom: 14px !important;
-    height: 16px;
-}
-
-
-#naye2m-about>div>div:nth-child(2)>div.col-md-8>p {
-    text-align: justify;
 }

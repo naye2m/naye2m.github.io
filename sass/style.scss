@@ -1,117 +1,12 @@
-$font-primary: 'Space Mono', Arial, serif;
-$font-secondary: 'Kaushan Script', cursive;
+@use "sass:color";
 
 
-
-// Overrides
-$grid-gutter-width: 40px !default;
-$border-radius-base: 4px !default;
-$padding-base-vertical: 14px !default;
-
-$brand-primary: #FF9000 !default;
-
-$brand-white: #fff;
-$brand-black: #000;
-$brand-darker: #444;
-$brand-gray: #ccc;
-$brand-lighter: #e9e9e9;
-$brand-body-color: #818892;
-$brand-selection-color: #f9f6f0;
-$brand-overlay-color: #4c4a8a;
-$brand-bg-color: #4d4d4d;
-
-
-$brand-bg-dark: $brand-white;
-
-$input-border-focus: $brand-primary !default;
-$form-group-margin-bottom: 30px !default;
-
-
-
-// Mixin
-@mixin translateX($translatex) {
-	-moz-transform: translateX($translatex);
-	-webkit-transform: translateX($translatex);
-	-ms-transform: translateX($translatex);
-	-o-transform: translateX($translatex);
-	transform: translateX($translatex);
-}
-
-@mixin transition($transition) {
-	-moz-transition: all $transition ease;
-	-o-transition: all $transition ease;
-	-webkit-transition: all $transition ease;
-	-ms-transition: all $transition ease;
-	transition: all $transition ease;
-}
-
-@mixin inline-block() {
-	display: -moz-inline-stack;
-	display: inline-block;
-	zoom: 1;
-	*display: inline;
-}
-
-@mixin border-radius($radius) {
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	-ms-border-radius: $radius;
-	border-radius: $radius;
-}
-
-@mixin flex() {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-}
-
-@mixin flexwrap() {
-	flex-wrap: wrap;
-	-webkit-flex-wrap: wrap;
-	-moz-flex-wrap: wrap;
-}
-
-@font-face {
-	font-family: 'icomoon';
-	src: url('../fonts/icomoon/icomoon.eot?srf3rx');
-	src: url('../fonts/icomoon/icomoon.eot?srf3rx#iefix') format('embedded-opentype'),
-		url('../fonts/icomoon/icomoon.ttf?srf3rx') format('truetype'),
-		url('../fonts/icomoon/icomoon.woff?srf3rx') format('woff'),
-		url('../fonts/icomoon/icomoon.svg?srf3rx#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@mixin icomoon() {
-
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-
-}
-
-// Import 
-@import 'bootstrap/mixins';
-@import 'bootstrap/variables';
-
-
-
-
-/* =======================================================
-*
-* 	Template Style 
-*
-* ======================================================= */
+@import "./variables.scss";
+// * =======================================================
+// *
+// * 	Template Style 
+// *
+// * ======================================================= 
 
 body {
 	font-family: $font-primary;
@@ -119,7 +14,7 @@ body {
 	font-size: 16px;
 	line-height: 1.7;
 	color: darken($brand-white, 70%);
-	background: #fff;
+	background: $brand-bg-white;
 }
 
 #page {
@@ -127,14 +22,14 @@ body {
 	overflow-x: hidden;
 	width: 100%;
 	height: 100%;
-	@include transition(.5s);
+	@include transitionWithSec(.5s);
 
 	.offcanvas & {
 		overflow: hidden;
 		position: absolute;
 
 		&:after {
-			@include transition(2s);
+			@include transitionWithSec(2s);
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -149,7 +44,7 @@ body {
 
 a {
 	color: $brand-primary;
-	@include transition(.5s);
+	@include transitionWithSec(.5s);
 
 	&:hover,
 	&:active,
@@ -162,6 +57,8 @@ a {
 
 p {
 	margin-bottom: 30px;
+	
+
 }
 
 h1,
@@ -177,20 +74,23 @@ figure {
 	margin: 0 0 20px 0;
 }
 
-::-webkit-selection {
+@mixin selection-styles(){
 	color: $brand-white;
-	background: $brand-primary;
+	background: $brand-selection-color;
+}
+::-webkit-selection {
+	@include selection-styles()
 }
 
 ::-moz-selection {
-	color: $brand-white;
-	background: $brand-primary;
+	@include selection-styles()
 }
 
 ::selection {
-	color: $brand-white;
-	background: $brand-primary;
+	@include selection-styles()
 }
+
+
 
 
 #naye2m-header,
@@ -204,11 +104,8 @@ figure {
 
 	.overlay {
 		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		background: rgba($brand-primary, .9);
+		inset:0; 
+		background: color.adjust(rgba($brand-primary, .7),$lightness: 10% );
 	}
 
 	.display-t {
@@ -226,7 +123,9 @@ figure {
 		h3 {
 			margin: 0;
 			padding: 0;
+			padding-bottom: 30px;
 			color: rgba(255, 255, 255, 1);
+			text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
 		}
 
 		h1 {
@@ -240,6 +139,8 @@ figure {
 			-ms-transform: rotate(-5deg);
 			-o-transform: rotate(-5deg);
 			transform: rotate(-5deg);
+			-webkit-text-stroke: 0.2px rgba($brand-primary, .2);
+			text-shadow: 1px 1px 2px white;
 
 			span {
 				padding: 4px 15px;
@@ -318,15 +219,93 @@ figure {
 			margin-bottom: 30px;
 			// border: 1px solid rgba($brand-white,1);
 			@include border-radius(50%);
+			background: url(images/user-3.jpg.png);
+			filter: drop-shadow(3px 8px 1px #0005);
+			transform: scale(1.25);
 		}
-
-		.naye2m-social-icons {
+		ul.naye2m-social-icons {
+			$icon-color: $brand-white;
 			li {
 				a {
+					transition-timing-function: ease-out;
 					color: $brand-white;
+					background: transparent;
+					height: 50px;
+					width: 50px;
+					aspect-ratio: 1;
+					@include border-radius(15px);
+					box-sizing: border-box;
+					padding: 10px;
+					// filter: drop-shadow(1px 1px 9px #fff8) drop-shadow(1px 1px 3px #fff8);
+					@include glow-animation();
+
+					color: $icon-color;
+
+					svg {
+						fill: $icon-color;
+					}
+
 
 					i {
 						font-size: 30px;
+					}
+				}
+			}
+
+			&:has(>li>a:hover) {
+				$icon-shadow: 2px 2px 0px rgba(color.change($brand-primary, $lightness: 25%), .2);
+				
+				// hovered tag 
+				& li {
+					a{
+						transform: rotate3d(1, 0, 1, -25deg) scale3d(1, 1, 20.5);
+						animation: none;
+					}
+					a:hover {
+						background: $brand-white;
+						// transform: scale(1.25);
+						box-shadow: 0 0 10px rgba($brand-white, .5);
+						text-shadow: $icon-shadow;
+			
+						scale: 1.5;
+						rotate: 350deg;
+			
+						$icon-color: $brand-primary;
+						color: $icon-color;
+						svg {
+							fill: $icon-color;
+							filter: drop-shadow($icon-shadow);
+						}
+			
+					}
+
+					a:not(:hover) {
+						opacity: 0.2;
+						scale: 0.7;
+					}
+
+					&:has(+li>a:hover),
+					&:has(a:hover)+li {
+					// both side 
+						a {
+
+							height: 50px;
+							background: $brand-white;
+							box-sizing: border-box;
+							padding: 10px;
+							aspect-ratio: 1;
+							border-radius: 15px;
+							scale: 1;
+							rotate: -40deg;
+
+						$icon-color: $brand-primary;
+						color: $icon-color;
+			
+						svg {
+							fill: $icon-color;
+							filter: drop-shadow($icon-shadow);
+						}						
+						}
 					}
 				}
 			}
@@ -397,8 +376,6 @@ figure {
 		}
 	}
 }
-
-
 #naye2m-about,
 #naye2m-resume,
 #naye2m-skills,
@@ -415,12 +392,38 @@ figure {
 	}
 }
 
+#naye2m-skills {
+	>div.container {
+		>div.skills {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			margin-top: 5em;
+			flex-direction: row;
+			align-content: space-around;
+
+			>.skill {
+				flex-basis: 25%;
+				margin: 0 auto;
+				padding: 0 30px;
+			}
+
+		}
+
+		.subskill {
+			max-width: 95vw;
+			margin: 0 auto;
+		}
+	}
+
+}
 #naye2m-started {
 	border-bottom: none;
 }
 
 .naye2m-bg-color {
-	background: $brand-white;
+	background: rgba($brand-primary, 1%);
+	z-index: -1;
 
 }
 
@@ -522,6 +525,7 @@ figure {
 			}
 		}
 	}
+	
 }
 
 
@@ -862,11 +866,11 @@ figure {
 	display: table;
 	overflow: hidden;
 
-	@media screen and(max-width: $screen-sm) {
+	@media screen and (max-width: $screen-sm) {
 		height: 400px;
 	}
 
-	@media screen and(max-width: $screen-xs) {
+	@media screen and (max-width: $screen-xs) {
 		height: 270px;
 	}
 
@@ -876,7 +880,7 @@ figure {
 		height: 270px;
 		background: $brand-white;
 		opacity: 0;
-		@include transition(.3s);
+		@include transitionWithSec(.3s);
 
 		h3 {
 			font-size: 20px;
@@ -896,7 +900,7 @@ figure {
 			transform: translate3d(0, 15px, 0);
 		}
 
-		@media screen and(max-width: $screen-sm) {
+		@media screen and (max-width: $screen-sm) {
 			opacity: 1;
 			background: rgba($brand-white, .6);
 
@@ -985,11 +989,11 @@ figure {
 		position: relative;
 		height: 300px;
 
-		@media screen and(max-width: $screen-sm) {
+		@media screen and (max-width: $screen-sm) {
 			height: 400px;
 		}
 
-		@media screen and(max-width: $screen-xs) {
+		@media screen and (max-width: $screen-xs) {
 			height: 270px;
 		}
 	}
@@ -1006,9 +1010,9 @@ figure {
 		-moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.06);
 		box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.06);
 
-		@include transition(.3s);
+		@include transitionWithSec(.3s);
 
-		@media screen and(max-width: $screen-sm) {
+		@media screen and (max-width: $screen-sm) {
 			padding: 10px;
 		}
 
@@ -1030,7 +1034,7 @@ figure {
 				display: inline-block;
 				margin-left: 10px;
 
-				@media screen and(max-width: $screen-sm) {
+				@media screen and (max-width: $screen-sm) {
 					font-size: 14px;
 				}
 
@@ -1096,7 +1100,7 @@ figure {
 		@include flex();
 		@include flexwrap();
 
-		@media screen and(max-width: $screen-sm) {
+		@media screen and (max-width: $screen-sm) {
 			display: none;
 		}
 	}
@@ -1105,7 +1109,7 @@ figure {
 		width: 50%;
 		padding: 4em;
 
-		@media screen and(max-width: $screen-sm) {
+		@media screen and (max-width: $screen-sm) {
 			width: 100%;
 			padding: 4em 1em;
 		}
@@ -1126,7 +1130,7 @@ figure {
 		right: 0;
 		bottom: 0;
 		background: rgba(0, 0, 0, .1);
-		@include transition(.5s);
+		@include transitionWithSec(.5s);
 	}
 }
 
@@ -1219,7 +1223,7 @@ input[type="text"] {
 	z-index: 999;
 	opacity: 0;
 	visibility: hidden;
-	@include transition(.5s);
+	@include transitionWithSec(.5s);
 
 	&.active {
 		opacity: 1;
@@ -1260,7 +1264,7 @@ input[type="text"] {
 	font-size: 16px;
 	font-weight: 400;
 	@include border-radius(30px);
-	@include transition(.5s);
+	@include transitionWithSec(.5s);
 	padding: 8px 20px;
 
 	&.btn-md {
@@ -1413,7 +1417,7 @@ input[type="text"] {
 	background: none;
 	border: 2px solid lighten($brand-black, 50%);
 	font-size: 16px;
-	@include transition(.3s);
+	@include transitionWithSec(.3s);
 
 	&:hover,
 	&:focus,
@@ -1424,7 +1428,7 @@ input[type="text"] {
 
 .btn.with-arrow {
 	position: relative;
-	@include transition(.3s);
+	@include transitionWithSec(.3s);
 
 	i {
 		visibility: hidden;
@@ -1433,7 +1437,7 @@ input[type="text"] {
 		right: 0px;
 		top: 50%;
 		margin-top: -8px;
-		@include transition(.2s);
+		@include transitionWithSec(.2s);
 	}
 
 	&:hover {
@@ -1497,4 +1501,74 @@ input[type="text"] {
 	.js & {
 		opacity: 0;
 	}
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 34px;
+  width: 75%;
+  border: 0;
+  border-top: 2px solid $brand-primary;
+}
+
+/*here you can get code for the responsive scroll bar*/
+
+// Scrollbar
+$scrollbar-color: linear-gradient(
+	to top, $brand-primary, rgba($brand-primary, 0.5
+	));
+::-webkit-scrollbar {
+  width: 6px;
+
+  &:hover {
+    width: 10px;
+  }
+  rotate: 90deg;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba($brand-primary, .5);
+  opacity: 0.5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  width: 6px;
+  margin: 0 2px;
+  background: $scrollbar-color;
+  animation: hue-rotate-animation 3s ease-in-out infinite;
+}
+
+
+
+
+@keyframes hue-rotate-animation {
+
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes glow {
+	100%, 0% {
+		filter: drop-shadow(1px 1px 9px #fff8) drop-shadow(1px 1px 3px #fff8);
+		}
+	50% {
+		filter: drop-shadow(0px 0px 0px #fff8) drop-shadow(0px 0px 0px #fff8);
+	}
+}
+
+.justi {
+  text-align: justify;
+}
+
+
+.glow{
+	// filter: drop-shadow(1px 1px 9px #fff8) drop-shadow(1px 1px 3px #fff8);
+	@include glow-animation;
 }

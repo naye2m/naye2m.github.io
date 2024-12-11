@@ -63,7 +63,7 @@
 									style="background: url(images/user-3.jpg.png);filter: drop-shadow(3px 8px 1px #0005);transform: scale(1.5);">
 								</div>
 								<h1><span id="Naye2m-nameBlock" data-value="Muhammad Nayeem">Muhammad Nayeem</span></h1>
-								<h3><span id="job-description">Web Developer / UI/UX Desinger </span></h3>
+								<h3>-| <span id="job-description">Web Developer / UI/UX Desinger</span> |-</h3>
 								<!-- !! <h3><span>C# Developer / 3D Desinger </span></h3> -->
 								<!-- !! <h3><span>Automation / Many more </span></h3> -->
 								<!-- <p><h1 data-value="LOOK, A BLOB">LOOK, A BLOB</h1></p> -->
@@ -777,7 +777,7 @@ You can also add other information to your footer, such as a link to your portfo
 						<h2>Skills</h2>
 					</div>
 				</div>
-				<div class="row row-pb-md">
+				<div class="row skills">
 					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
 						<div class="chart" data-percent="95"><span><strong>HTML5</strong>95%</span></div>
 					</div>
@@ -806,7 +806,7 @@ You can also add other information to your footer, such as a link to your portfo
 				</div>
 				<script>
 					let skills = {
-						"C": 83,
+						"C/C++": 83,
 						"PYTHON3": 88,
 						"HTML5": 98,
 						"JAVASCRIPT(ES6)": 98,
@@ -816,16 +816,22 @@ You can also add other information to your footer, such as a link to your portfo
 						"JAVA 10": 80,
 						"C#|DOT NET 7.0": 87,
 					}
-					document.querySelector("#naye2m-skills > div > div.row.row-pb-md").innerHTML = Object.keys(skills)
-						.map(e => `<div class="col-md-4 col-sm-6 col-xs-12 text-center"><div class="chart" data-percent="${skills[e]}"><span><strong>${e}</strong>${skills[e]}%</span></div></div>`)
+					document.querySelector("#naye2m-skills > div > div.skills").innerHTML = Object.keys(skills)
+						.map(e => `<div class="skill text-center"><div class="chart" data-percent="${skills[e]}"><span><strong>${e}</strong>${skills[e]}%</span></div></div>`)
 						.join("")
 				</script>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center naye2m-heading">
+						<h2>Others Skills</h2>
+					</div>
+				</div>
+
 				<div class="row subskill">
 					<div class="col-md-6">
 						<div class="progress-wrap">
 							<h3><span class="name-left">HTML5/CSS3</span><span class="value-right">95%</span></h3>
 							<div class="progress">
-								<div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
+								<div class="progress-bar progress-bar-1 <!-- 1-5 --> progress-bar-striped active" role="progressbar"
 									aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
 								</div>
 							</div>
@@ -1071,8 +1077,8 @@ You can also add other information to your footer, such as a link to your portfo
 				<h2>Contact</h2>
 				<form action="/responds/" method="POST">
 					<div class="row form-group">
-						<div class="col-md-6"><input name="name" class="form-control" id="name"
-								placeholder="Your firstname" type="text" /></div>
+						<div class="col-md-12"><input name="name" class="form-control" id="name"
+								placeholder="Your Fullname" type="text" /></div>
 					</div>
 					<div class="row form-group">
 						<div class="col-md-12">
