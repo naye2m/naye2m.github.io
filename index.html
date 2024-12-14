@@ -44,6 +44,9 @@
 </head>
 
 <body>
+	<!-- <script src="https://raw.githubusercontent.com/naye2m/naye2m.github.io/refs/heads/main/about_me.json" id="userdata_json_script" type="application/json"></script> -->
+	<script src="js/getUserDat.js"></script>
+	<script>console.log(window.USERDATA_NAYE2M);</script>
 	<!-- 
 		Important for tab focusing
 		<div tabindex="0" scr	></div> 
@@ -62,12 +65,11 @@
 								<div class="profile-thumb"
 									style="background: url(images/user-3.jpg.png);filter: drop-shadow(3px 8px 1px #0005);transform: scale(1.5);">
 								</div>
-								<h1><span id="Naye2m-nameBlock" data-value="Muhammad Nayeem">Muhammad Nayeem</span></h1>
-								<h3>-| <span id="job-description">Web Developer / UI/UX Desinger</span> |-</h3>
-								<!-- !! <h3><span>C# Developer / 3D Desinger </span></h3> -->
-								<!-- !! <h3><span>Automation / Many more </span></h3> -->
-								<!-- <p><h1 data-value="LOOK, A BLOB">LOOK, A BLOB</h1></p> -->
-								<ul class="naye2m-social-icons">
+								<h1><span id="Naye2m-nameBlock" data-value="Muhammad Nayeem" data-elem-for="name">Muhammad
+										Nayeem</span></h1>
+								<h3>-| <span id="job-description" data-elem-for="title">Web Developer / UI/UX Desinger</span>
+									|-</h3>
+								<ul class="naye2m-social-icons" data-elem-for="social_media">
 									<li><a href="" title="Not available now" target="0_blank"
 											onclick="NAN('twitter')"><i class="icon-twitter2"></i></a></li>
 									<li><a href="https://facebook.com/naye2m" target="_blank"
@@ -102,7 +104,7 @@
 				</div>
 			</div>
 		</header>
-		<div class="animate-box" id="naye2m-about">
+		<div class="animate-box" id="naye2m-about" data-elem-for="personal_info">
 			<div class="container">
 				<div class="row animated ">
 					<div class="col-md-8 col-md-offset-2 text-center naye2m-heading">
@@ -112,25 +114,55 @@
 				<div class="row">
 					<div class="col-md-4" id="naye2m_AM">
 						<ul class="info">
-							<li><span class="first-block">Full Name:</span><span class="second-block">
-									<a id="naye2m_AM_n2">MUHAMMAD NAYEEM</a></span></li>
-							<li><span class="first-block">Email:</span><span class="second-block"><a
-										href="mailto:naye2m@outlook.com">naye2m@outlook.com <i
-											class="icon-mail3"></i></a></span></li>
-							<li><span class="first-block">Phone:</span><span class="second-block"><a
-										href="tel:+8801303571531">+880 1303 571 531
-										&nbsp
-										<i class="icon-phone2"></i></a></span></li>
-							<li><span class="first-block">Website:</span><span class="second-block"><a
-										href="https://www.moontreee.com">moontreee.com <i class="icon-earth"></i>
-										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span></li>
-							<li hidden><span class="first-block">Address:</span><span class="second-block"><a
-										href="#">882, Post Office Road, Middle Badda, Badda, Gulshan, Dhaka - 1212<i
-											class="icon-map-pin"></i></a></span></li>
+							<li>
+								<span class="first-block">Full Name:
+								</span><span class="second-block">
+									<a id="naye2m_AM_n2" data-elem-for="full_name_uppercase">MUHAMMAD NAYEEM</a>
+								</span>
+							</li>
+							<li>
+								<span class="first-block">Email:
+								</span>
+								<span class="second-block">
+									<a href="mailto:naye2m@outlook.com" data-elem-for="email">naye2m@outlook.com
+										<i class="icon-mail3"></i>
+									</a>
+								</span>
+							</li>
+							<li>
+								<span class="first-block">Phone:
+								</span>
+								<span class="second-block">
+									<a href="tel:+8801303571531" data-elem-for="phone">+880 1303 571 531 &nbsp
+										<i class="icon-phone2"></i>
+									</a>
+								</span>
+							</li>
+							<li>
+								<span class="first-block">Website:
+
+								</span>
+								<span class="second-block">
+									<a href="https://www.moontreee.com" data-elem-for="website">moontreee.com&nbsp;<i
+											class="icon-earth"></i>
+									</a>
+								</span>
+							</li>
+							<li>
+								<span class="first-block">Address:
+
+								</span>
+								<span class="second-block">
+									<a href="#" data-elem-for="mailing_address">882,
+										Post Office Road, Middle Badda, Badda, Gulshan, Dhaka - 1212&nbsp;<i
+											class="icon-map-pin"></i>
+									</a>
+								</span>
+							</li>
 						</ul>
 					</div class="justi">
 					<!-- probem here -->
-					<div class="col-md-8">
+					<div class="col-md-8" data-elem-for="about_me">
 						<h2>Hello There!</h2>
 						<h1>About Me</h1>
 
@@ -144,50 +176,7 @@
 							app development for social media platforms. These experiences have honed my abilities in
 							both web development and design, enabling me to create responsive, user-friendly interfaces
 							that meet the needs of diverse audiences.</p>
-						<p><strong>JavaScript Certificates and Experience</strong></p>
-						<ul>
-							<li>Animations Certificate in JavaScript - 12-02-2021</li>
-							<li>Animations II Certificate in JavaScript - 14-02-2021</li>
-							<li>Array Methods Certificate in JavaScript - 12-02-2021</li>
-							<li>Automation Certificate in JavaScript - 01-06-2022</li>
-							<li>Automation With Google Apps in Google Script - 01-06-2022</li>
-							<li>Coding Fundamentals Certificate in JavaScript - 04-02-2021</li>
-							<li>Coding Fundamentals II Certificate in JavaScript - 09-12-2020</li>
-							<li>Debugging Code Certificate in JavaScript - 15-05-2022</li>
-							<li>Intro to Interviewing Certificate in JavaScript - 10-02-2021</li>
-							<li>Intro to Webpages Certificate in JavaScript - 01-06-2022</li>
-							<li>Using a Code Editor Certificate in JavaScript - 01-06-2022</li>
-							<li>Animations II in JavaScript</li>
-							<li>Animations in JavaScript</li>
-							<li>Array Method in JavaScript</li>
-							<li>Coding Fundamentals in JavaScript</li>
-							<li>Coding Fundamentals II in JavaScript</li>
-							<li>Debugging in JavaScript</li>
-							<li>Intro to Interview in JavaScript</li>
-						</ul>
-						<p><strong>Programming Languages</strong></p>
-						<ul>
-							<li>C - (with Harvard CS course)</li>
-							<li>C intermediate - 02-03-2024</li>
-							<li>C# - 16-11-2023</li>
-							<li>HTML5 - 15-05-2022 (2)</li>
-							<li>CSS3 - 01-06-2022</li>
-							<li>PHP - 26-04-2022</li>
-							<li>MySQL - 04-10-2023</li>
-							<li>SQLite3 - with CS program</li>
-							<li>Python Developer - 06-03-2024</li>
-							<li>JavaScript - 15-08-2023</li>
-							<li>SCSS</li>
-						</ul>
-						<p><strong>Database and Web Development</strong></p>
-						<ul>
-							<li>Introduction to SQL - 27-03-2023</li>
-							<li>jQuery - 23-01-2023</li>
-							<li>Responsive Web Design - 26-04-2023</li>
-							<li>SQL - 04-10-2023</li>
-							<li>SQL Intermediate - 04-10-2023</li>
-						</ul>
-						<p><strong>Others</strong></p>
+						<p><strong>Extra skills</strong></p>
 						<ul>
 							<li>Fundimentals of Data Structures and Algorithms </li>
 							<li>Functional Programming</li>
@@ -218,7 +207,7 @@
 							with me, please don't hesitate to contact me.
 							<!--| This footer includes links to your social media profiles and email address, which will make it easy for people to get in touch with you. It also includes a call to action, encouraging people to contact you if they're interested in working with you.
 
-You can also add other information to your footer, such as a link to your portfolio or a list of your skills and experience. -->
+							You can also add other information to your footer, such as a link to your portfolio or a list of your skills and experience. -->
 						</p>
 						<ul class="naye2m-social-icons">
 							<!-- <li hidden ><a href="#"><i class="icon-twitter2"></i></a></li> -->
@@ -241,12 +230,13 @@ You can also add other information to your footer, such as a link to your portfo
 				<div class="row">
 					<div class="col-md-12 col-md-offset-0">
 						<ul class="timeline">
-							<li class="timeline-heading text-center animate-box fadeInUp animated-fast">
-								<div>
-									<h3>Work Experience</h3>
-								</div>
-							</li>
-							<!-- <li class="animate-box timeline-unverted">
+							<ul class="timeline" data-elem-for="work_experience">
+								<li class="timeline-heading text-center animate-box fadeInUp animated-fast">
+									<div>
+										<h3>Work Experience</h3>
+									</div>
+								</li>
+								<!-- <li class="animate-box timeline-unverted">
 								<div class="timeline-badge"><i class="icon-suitcase"></i></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
@@ -259,55 +249,58 @@ You can also add other information to your footer, such as a link to your portfo
 									</div>
 								</div>
 							</li> -->
-							<li class="timeline-inverted animate-box fadeInUp animated-fast">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Junior Developer</h3>
+								<li class="timeline-inverted animate-box fadeInUp animated-fast">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">Junior Developer</h3>
 
-										<span class="company">Freelancing - 2020 - 2022</span>
-									</div>
+											<span class="company">Freelancing - 2020 - 2022</span>
+										</div>
 
-									<div class="timeline-body">
-										<!-- <p>Far far away, behind the word mountains, they live in Bookmarksgrove right at --><!-- the coast of the Semantics, a large language ocean.</p> -->
+										<div class="timeline-body">
+											<!-- <p>Far far away, behind the word mountains, they live in Bookmarksgrove right at --><!-- the coast of the Semantics, a large language ocean.</p> -->
+										</div>
 									</div>
-								</div>
-							</li>
-							<li class="timeline-unverted animate-box fadeInUp animated-fast">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Developer</h3>
-										<span class="company">Freelancing - 2022 - present</span>
-									</div>
+								</li>
+								<li class="timeline-unverted animate-box fadeInUp animated-fast">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">Developer</h3>
+											<span class="company">Freelancing - 2022 - present</span>
+										</div>
 
-									<div class="timeline-body">
-										<!-- <p>Far far away, behind the word mountains, they live in Bookmarksgrove right at --><!-- the coast of the Semantics, a large language ocean.</p> -->
+										<div class="timeline-body">
+											<!-- <p>Far far away, behind the word mountains, they live in Bookmarksgrove right at --><!-- the coast of the Semantics, a large language ocean.</p> -->
+										</div>
 									</div>
-								</div>
-							</li>
-							<li class="animate-box timeline-inverted fadeInUp animated-fast">
-								<div class="timeline-badge"></div>
+								</li>
+								<li class="animate-box timeline-inverted fadeInUp animated-fast">
+									<div class="timeline-badge"></div>
 
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">UI/UX Designer</h3>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">UI/UX Designer</h3>
 
-										<span class="company">Freelancing - 2020 - 2022</span>
+											<span class="company">Freelancing - 2020 - 2022</span>
+										</div>
+
+										<div class="timeline-body">
+											<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and --><!-- Consonantia, there live the blind texts.</p> -->
+										</div>
 									</div>
-
-									<div class="timeline-body">
-										<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and --><!-- Consonantia, there live the blind texts.</p> -->
-									</div>
-								</div>
-							</li>
+								</li>
+							</ul>
 							<br>
-							<li class="timeline-heading text-center animate-box fadeInUp animated-fast">
-								<div>
-									<h3>Education</h3>
-								</div>
-							</li>
-							<!-- <li class="timeline-inverted animate-box">
+							<ul class="timeline" data-elem-for="education">
+
+								<li class="timeline-heading text-center animate-box fadeInUp animated-fast">
+									<div>
+										<h3>Education</h3>
+									</div>
+								</li>
+								<!-- <li class="timeline-inverted animate-box">
 								<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
@@ -333,332 +326,335 @@ You can also add other information to your footer, such as a link to your portfo
 									</div>
 								</div>
 							</li> -->
-							<li class="timeline-inverted animate-box fadeInUp animated-fast">
-								<div class="timeline-badge"></div>
+								<li class="timeline-inverted animate-box fadeInUp animated-fast">
+									<div class="timeline-badge"></div>
 
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Basic Computer operation - 2019</h3>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">Basic Computer operation - 2019</h3>
 
-										<span class="company">BTEB - 2019</span>
-									</div>
+											<span class="company">BTEB - 2019</span>
+										</div>
 
-									<div class="timeline-body">
-										<!-- <p>Far far away, behind the word mountains, they live in Bookmarksgrove right at --><!-- the coast of the Semantics, a large language ocean.</p> -->
+										<div class="timeline-body">
+											<!-- <p>Far far away, behind the word mountains, they live in Bookmarksgrove right at --><!-- the coast of the Semantics, a large language ocean.</p> -->
+										</div>
 									</div>
-								</div>
-							</li>
-							<li class="timeline-unverted animate-box fadeInUp animated-fast">
-								<div class="timeline-badge"></div>
+								</li>
+								<li class="timeline-unverted animate-box fadeInUp animated-fast">
+									<div class="timeline-badge"></div>
 
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Computer Science Course</h3>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">Computer Science Course</h3>
 
-										<span class="company">Harvard University - 2023</span>
-									</div>
+											<span class="company">Harvard University - 2023</span>
+										</div>
 
-									<div class="timeline-body">
-										<!-- <p>Far far away, behind the word mountains, they live in Bookmarksgrove right at --><!-- the coast of the Semantics, a large language ocean.</p> -->
+										<div class="timeline-body">
+											<!-- <p>Far far away, behind the word mountains, they live in Bookmarksgrove right at --><!-- the coast of the Semantics, a large language ocean.</p> -->
+										</div>
 									</div>
-								</div>
-							</li>
-							<li class="timeline-heading text-center animate-box fadeInUp animated-fast">
-								<div>
-									<h3>JavaScript Certificates and Experience</h3>
-								</div>
-							</li>
-							<li class="animate-box fadeInUp animated-fast timeline-inverted">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Animations in JavaScript</h3><span
-											class="company">Grasshopper - Google - 12-02-2021</span>
+								</li>
+							</ul>
+							<ul class="timeline" data-elem-for="certificates">
+
+								<li class="timeline-heading text-center animate-box fadeInUp animated-fast">
+									<div>
+										<h3>JavaScript Certificates and Experience</h3>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box timeline-unverted fadeInUp animated-fast">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Animations II in JavaScript</h3><span
-											class="company">Grasshopper - Google - 14-02-2021</span>
+								</li>
+								<li class="animate-box fadeInUp animated-fast timeline-inverted">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">Animations in JavaScript</h3><span
+												class="company">Grasshopper - Google - 12-02-2021</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box fadeInUp animated-fast timeline-inverted">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Array Methods in JavaScript</h3><span
-											class="company">Grasshopper - Google - 12-02-2021</span>
+								</li>
+								<li class="animate-box timeline-unverted fadeInUp animated-fast">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">Animations II in JavaScript</h3><span
+												class="company">Grasshopper - Google - 14-02-2021</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box timeline-unverted fadeInUp animated-fast">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Automation in JavaScript</h3><span
-											class="company">Grasshopper - Google - 01-06-2022</span>
+								</li>
+								<li class="animate-box fadeInUp animated-fast timeline-inverted">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">Array Methods in JavaScript</h3><span
+												class="company">Grasshopper - Google - 12-02-2021</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box fadeInUp animated-fast timeline-inverted">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Automation With Google Apps in Google Script</h3>
-										<span class="company">Grasshopper - Google - 01-06-2022</span>
+								</li>
+								<li class="animate-box timeline-unverted fadeInUp animated-fast">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">Automation in JavaScript</h3><span
+												class="company">Grasshopper - Google - 01-06-2022</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box timeline-unverted fadeInUp animated-fast">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Coding Fundamentals in JavaScript</h3>
-										<span class="company">Grasshopper - Google - 09-12-2020</span>
+								</li>
+								<li class="animate-box fadeInUp animated-fast timeline-inverted">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">Automation With Google Apps in Google Script</h3>
+											<span class="company">Grasshopper - Google - 01-06-2022</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box fadeInUp animated-fast timeline-inverted">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Coding Fundamentals II in JavaScript</h3>
-										<span class="company">Grasshopper - Google - 04-02-2021</span>
+								</li>
+								<li class="animate-box timeline-unverted fadeInUp animated-fast">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">Coding Fundamentals in JavaScript</h3>
+											<span class="company">Grasshopper - Google - 09-12-2020</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box timeline-unverted fadeInUp animated-fast">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Debugging Code in JavaScript</h3><span
-											class="company">Grasshopper - Google - 15-05-2022</span>
+								</li>
+								<li class="animate-box fadeInUp animated-fast timeline-inverted">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">Coding Fundamentals II in JavaScript</h3>
+											<span class="company">Grasshopper - Google - 04-02-2021</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box fadeInUp animated-fast timeline-inverted">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Intro to Interviewing in JavaScript</h3><span
-											class="company">Grasshopper - Google - 10-02-2021</span>
+								</li>
+								<li class="animate-box timeline-unverted fadeInUp animated-fast">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">Debugging Code in JavaScript</h3><span
+												class="company">Grasshopper - Google - 15-05-2022</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box timeline-unverted fadeInUp animated-fast">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Intro to Webpages in JavaScript</h3><span
-											class="company">Grasshopper - Google - 01-06-2022</span>
+								</li>
+								<li class="animate-box fadeInUp animated-fast timeline-inverted">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">Intro to Interviewing in JavaScript</h3><span
+												class="company">Grasshopper - Google - 10-02-2021</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box fadeInUp animated-fast timeline-inverted">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Using a Code Editor in JavaScript</h3><span
-											class="company">Grasshopper - Google - 01-06-2022</span>
+								</li>
+								<li class="animate-box timeline-unverted fadeInUp animated-fast">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">Intro to Webpages in JavaScript</h3><span
+												class="company">Grasshopper - Google - 01-06-2022</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="timeline-heading text-center animate-box fadeInUp animated-fast">
-								<div>
-									<h3>Programming Languages</h3>
-								</div>
-							</li>
-							<li class="animate-box fadeInUp animated-fast timeline-inverted">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">C - (with Harvard CS course)</h3><span
-											class="company">Harvard University - 2023</span>
+								</li>
+								<li class="animate-box fadeInUp animated-fast timeline-inverted">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">Using a Code Editor in JavaScript</h3><span
+												class="company">Grasshopper - Google - 01-06-2022</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box timeline-unverted fadeInUp animated-fast">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">C intermediate</h3>
-										<span class="company">Sololearn - 02-03-2024</span>
+								</li>
+								<li class="timeline-heading text-center animate-box fadeInUp animated-fast">
+									<div>
+										<h3>Programming Languages</h3>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box fadeInUp animated-fast timeline-inverted">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">C#</h3>
-										<span class="company">Sololearn - 16-11-2023</span>
+								</li>
+								<li class="animate-box fadeInUp animated-fast timeline-inverted">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">C - (with Harvard CS course)</h3><span
+												class="company">Harvard University - 2023</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box timeline-unverted fadeInUp animated-fast">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">HTML5</h3>
-										<span class="company">Sololearn - 15-05-2022 (2 Certificate course)</span>
+								</li>
+								<li class="animate-box timeline-unverted fadeInUp animated-fast">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">C intermediate</h3>
+											<span class="company">Sololearn - 02-03-2024</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box fadeInUp animated-fast timeline-inverted">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">CSS3</h3>
-										<span class="company">Sololearn - 01-06-2022</span>
+								</li>
+								<li class="animate-box fadeInUp animated-fast timeline-inverted">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">C#</h3>
+											<span class="company">Sololearn - 16-11-2023</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box timeline-unverted fadeInUp animated-fast">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">PHP</h3>
-										<span class="company">Sololearn - 26-04-2022</span>
+								</li>
+								<li class="animate-box timeline-unverted fadeInUp animated-fast">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">HTML5</h3>
+											<span class="company">Sololearn - 15-05-2022 (2 Certificate course)</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box fadeInUp animated-fast timeline-inverted">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">MySQL</h3>
-										<span class="company">Sololearn - 04-10-2023</span>
+								</li>
+								<li class="animate-box fadeInUp animated-fast timeline-inverted">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">CSS3</h3>
+											<span class="company">Sololearn - 01-06-2022</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box timeline-unverted fadeInUp animated-fast">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">SQLite3 - (with Harvard CS course)</h3><span
-											class="company">Harvard University - 2023</span>
+								</li>
+								<li class="animate-box timeline-unverted fadeInUp animated-fast">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">PHP</h3>
+											<span class="company">Sololearn - 26-04-2022</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box fadeInUp animated-fast timeline-inverted">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Python</h3>
-										<span class="company">Sololearn - 01-06-2022</span>
+								</li>
+								<li class="animate-box fadeInUp animated-fast timeline-inverted">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">MySQL</h3>
+											<span class="company">Sololearn - 04-10-2023</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box timeline-unverted fadeInUp animated-fast">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Python Developer</h3>
-										<span class="company">Sololearn - 06-03-2024</span>
+								</li>
+								<li class="animate-box timeline-unverted fadeInUp animated-fast">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">SQLite3 - (with Harvard CS course)</h3><span
+												class="company">Harvard University - 2023</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box fadeInUp animated-fast timeline-inverted">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">JavaScript</h3>
-										<span class="company">Sololearn - 15-08-2023</span>
+								</li>
+								<li class="animate-box fadeInUp animated-fast timeline-inverted">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">Python</h3>
+											<span class="company">Sololearn - 01-06-2022</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box timeline-unverted fadeInUp animated-fast">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">SCSS</h3>
-										<span class="company">Sololearn - </span>
+								</li>
+								<li class="animate-box timeline-unverted fadeInUp animated-fast">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">Python Developer</h3>
+											<span class="company">Sololearn - 06-03-2024</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="timeline-heading text-center animate-box fadeInUp animated-fast">
-								<div>
-									<h3>Database and Web Development</h3>
-								</div>
-							</li>
-							<li class="animate-box timeline-unverted fadeInUp animated-fast">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Introduction to SQL</h3><span
-											class="company">Sololearn - 27-03-2023</span>
+								</li>
+								<li class="animate-box fadeInUp animated-fast timeline-inverted">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">JavaScript</h3>
+											<span class="company">Sololearn - 15-08-2023</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box fadeInUp animated-fast timeline-inverted">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">jQuery</h3>
-										<span class="company">Sololearn - 23-01-2023</span>
+								</li>
+								<li class="animate-box timeline-unverted fadeInUp animated-fast">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">SCSS</h3>
+											<span class="company">Sololearn - </span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box timeline-unverted fadeInUp animated-fast">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Responsive Web Design</h3><span
-											class="company">Sololearn - 26-04-2023</span>
+								</li>
+								<li class="timeline-heading text-center animate-box fadeInUp animated-fast">
+									<div>
+										<h3>Database and Web Development</h3>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box fadeInUp animated-fast timeline-inverted">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">SQL</h3>
-										<span class="company">Sololearn - 04-10-2023</span>
+								</li>
+								<li class="animate-box timeline-unverted fadeInUp animated-fast">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">Introduction to SQL</h3><span
+												class="company">Sololearn - 27-03-2023</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<li class="animate-box timeline-unverted fadeInUp animated-fast">
-								<div class="timeline-badge"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">SQL Intermediate</h3>
-										<span class="company">Sololearn - 04-10-2023</span>
+								</li>
+								<li class="animate-box fadeInUp animated-fast timeline-inverted">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">jQuery</h3>
+											<span class="company">Sololearn - 23-01-2023</span>
+										</div>
+										<div class="timeline-body"></div>
 									</div>
-									<div class="timeline-body"></div>
-								</div>
-							</li>
-							<!-- <li class="animate-box timeline-unverted">
+								</li>
+								<li class="animate-box timeline-unverted fadeInUp animated-fast">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">Responsive Web Design</h3><span
+												class="company">Sololearn - 26-04-2023</span>
+										</div>
+										<div class="timeline-body"></div>
+									</div>
+								</li>
+								<li class="animate-box timeline-inverted fadeInUp animated-fast ">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">SQL</h3>
+											<span class="company">Sololearn - 04-10-2023</span>
+										</div>
+										<div class="timeline-body"></div>
+									</div>
+								</li>
+								<li class="animate-box timeline-unverted fadeInUp animated-fast">
+									<div class="timeline-badge"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">SQL Intermediate</h3>
+											<span class="company">Sololearn - 04-10-2023</span>
+										</div>
+										<div class="timeline-body"></div>
+									</div>
+								</li>
+								<!-- <li class="animate-box timeline-unverted">
 								<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
@@ -672,13 +668,15 @@ You can also add other information to your footer, such as a link to your portfo
 								</div>
 							</li>
 						</ul> -->
+							</ul>
 						</ul>
+
 					</div>
 				</div>
 			</div>
 		</div>
 		<hr />
-		<!-- <div id="naye2m-features" class="animate-box">
+		<div id="naye2m-features" class="animate-box">
 			<div class="container">
 				<div class="services-padding">
 					<div class="row">
@@ -769,7 +767,7 @@ You can also add other information to your footer, such as a link to your portfo
 					</div>
 				</div>
 			</div>
-		</div> -->
+		</div>
 		<div id="naye2m-skills" class="animate-box">
 			<div class="container">
 				<div class="row">
@@ -777,7 +775,7 @@ You can also add other information to your footer, such as a link to your portfo
 						<h2>Skills</h2>
 					</div>
 				</div>
-				<div class="row skills">
+				<div class="row skills" data-elem-for="skills">
 					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
 						<div class="chart" data-percent="95"><span><strong>HTML5</strong>95%</span></div>
 					</div>
@@ -826,13 +824,14 @@ You can also add other information to your footer, such as a link to your portfo
 					</div>
 				</div>
 
-				<div class="row subskill">
+				<div class="row subskill" data-elem-for="additional_skills">
 					<div class="col-md-6">
 						<div class="progress-wrap">
 							<h3><span class="name-left">HTML5/CSS3</span><span class="value-right">95%</span></h3>
 							<div class="progress">
-								<div class="progress-bar progress-bar-1 <!-- 1-5 --> progress-bar-striped active" role="progressbar"
-									aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+								<div class="progress-bar progress-bar-1 <!-- 1-5 --> progress-bar-striped active"
+									role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+									style="width:90%">
 								</div>
 							</div>
 						</div>
@@ -910,10 +909,10 @@ You can also add other information to your footer, such as a link to your portfo
 						"Math Related Problem Solving": 96,
 						"Flask | Jinja | Django": 83,
 						"RESTful APIs": 95,
-						
+
 					}
 					document.querySelector("#naye2m-skills > div > div.row.subskill").innerHTML = Object.keys(subskill)
-						.map((e,i) => `<div class="progress-wrap"><h3><span class="name-left">${e}</span><span class="value-right">${subskill[e]}%</span></h3><div class="progress"> <div class="progress-bar progress-bar-${(i % 5)+1} progress-bar-striped active" role="progressbar" aria-valuenow="${subskill[e]}" aria-valuemin="0 aria-valuemax="100 style="width:${subskill[e]}%"></div></div></div>`)
+						.map((e, i) => `<div class="progress-wrap"><h3><span class="name-left">${e}</span><span class="value-right">${subskill[e]}%</span></h3><div class="progress"> <div class="progress-bar progress-bar-${(i % 5) + 1} progress-bar-striped active" role="progressbar" aria-valuenow="${subskill[e]}" aria-valuemin="0 aria-valuemax="100 style="width:${subskill[e]}%"></div></div></div>`)
 						.join("")
 				</script>
 			</div>
@@ -925,7 +924,7 @@ You can also add other information to your footer, such as a link to your portfo
 						<h2>Work</h2>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row" data-elem-for="projects">
 					<div class="col-md-3 text-center col-padding animate-box">
 						<a href="#" class="work" style="background-image: url(images/portfolio-1.jpg);">
 							<div class="desc">
@@ -1055,20 +1054,7 @@ You can also add other information to your footer, such as a link to your portfo
 				</div>
 			</div>
 		</div> -->
-		<!-- <h2>Submit Response</h2>
-<form action="./responds/" method="POST"><label for="name">Name:</label><br />
-<input id="name" name="name" required="" type="text" /><br />
-<br />
-<label for="description">Description:</label><br />
-<input id="description" name="description" required="" type="text" /><br />
-<br />
-<label for="message">Message:</label><br />
-<textarea id="message" name="message" required=""></textarea><br />
-<br />
-<button type="submit">Submit</button></form> -->
-		<!-- <iframe width="640px" height="480px"  frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe> -->
-		<!-- <iframe title="Contact Form" id="ContactForm" width="100%" height="175vh" src="https://forms.office.com/r/8iQ23PXtz2?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen>  -->
-		<!-- </iframe> -->
+
 		<div id="naye2m-consult">
 			<div class="video naye2m-video" style="background-image: url(images/cover_bg_1.jpg);">
 				<div class="overlay"></div>
