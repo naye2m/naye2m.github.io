@@ -69,13 +69,16 @@ type return_JSON_type = {
 
  */
 
+const { title } = require("process");
+
 let data = {
     personal_info: {
         full_name: "Muhammad Nayeem",
         full_name_uppercase: "MUHAMMAD NAYEEM",
         short_name: "Nayeem",
         email: "naye2m@outlook.com",
-        phone: "+880 1303 571 531",
+        phone_txt: "+880 1303 571 531",
+        phone: "+8801303571531",
         website: "https://moontreee.com",
         bio: "Passionate and technically skilled Full Stack Developer with solid expertise in front-end and back-end technologies. Highly proficient in Python, JavaScript, with a strong focus on web development and programming problem-solving. Experienced in building functional and responsive applications, including a Sudoku solver, vouchering web app, and web-based games. Constantly seeking opportunities to enhance my skills and contribute to innovative projects.",
         mailing_address:
@@ -104,16 +107,16 @@ let data = {
         "Dot NET | C# Devloper",
     ],
     social_media: [
-        { name: "facebook", link: "https://facebook.com/naye2m" },
-        { name: "twitter", link: "https://x.com/_naye2m" },
-        { name: "telegram", link: "https://t.me/naye2m" },
-        { name: "linkedin", link: "https://linkedin.com/in/naye2m" },
-        { name: "whatsapp", link: "https://wa.me/+8801303571531" },
-        { name: "github", link: "https://github.com/naye2m" },
-        { name: "instagram", link: "https://instagram.com/naye2m" },
-        { name: "discord", link: "https://discord.gg/user/naye2m#1718" },
-        { name: "blog", link: "https://moontreee.com/blog" },
-        { name: "youtube", link: "https://youtube.com/c/naye2m" }
+        { name: "facebook", icon: "facebook2", link: "https://facebook.com/naye2m" },
+        { name: "twitter", icon: "twitter2", link: "https://x.com/_naye2m" },
+        { name: "telegram", icon: "telegram", link: "https://t.me/naye2m" },
+        { name: "linkedin", icon: "linkedin3", link: "https://linkedin.com/in/naye2m" },
+        { name: "whatsapp", icon: "whatsapp", link: "https://wa.me/+8801303571531" },
+        { name: "github", icon: "github2", link: "https://github.com/naye2m" },
+        { name: "instagram", icon: "instagram2", link: "https://instagram.com/naye2m" },
+        // { name: "discord",icon:"discord", link: "https://discord.gg/user/naye2m#1718" },
+        { name: "blog", icon: "quill", link: "https://moontreee.com/blog" },
+        { name: "youtube", icon: "youtube", link: "https://youtube.com/c/naye2m" }
     ],
     portfolio: {
         portfolio_link: "https://moontreee.com",
@@ -146,7 +149,7 @@ let data = {
                 date: "12-02-2021",
                 issued_by: "Grasshopper - Google",
                 validation_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Animations.pdf",
-                image_link:"https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/animations.jpg",
+                image_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/animations.jpg",
                 file_link: "",
                 valid_until: null,
                 description:
@@ -157,7 +160,7 @@ let data = {
                 date: "14-02-2021",
                 issued_by: "Grasshopper - Google",
                 validation_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Animations_II.pdf",
-                image_link:"https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/animations_II.jpg",
+                image_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/animations_II.jpg",
                 file_link: "",
                 valid_until: null,
                 description: "Advanced knowledge in JavaScript animations.",
@@ -167,7 +170,7 @@ let data = {
                 date: "12-02-2021",
                 issued_by: "Grasshopper - Google",
                 validation_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/Array_Methods.jpg",
-                image_link:"https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/Array_Methods.jpg",
+                image_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/Array_Methods.jpg",
                 file_link: "",
                 valid_until: null,
                 description:
@@ -188,7 +191,7 @@ let data = {
                 date: "01-06-2022",
                 issued_by: "Grasshopper - Google",
                 validation_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Automation.pdf",
-                image_link:"https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Automation.png",
+                image_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Automation.png",
                 file_link: "",
                 valid_until: null,
                 description: "Learned to automate tasks using Google Apps Script.",
@@ -198,7 +201,7 @@ let data = {
                 date: "09-12-2020",
                 issued_by: "Grasshopper - Google",
                 validation_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Coding_Fundamentals.pdf",
-                image_link:"https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/Coding_fundamentals.jpg",
+                image_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/Coding_fundamentals.jpg",
                 file_link: "",
                 valid_until: null,
                 description: "Acquired a strong foundation in JavaScript basics.",
@@ -208,7 +211,7 @@ let data = {
                 date: "04-02-2021",
                 issued_by: "Grasshopper - Google",
                 validation_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Coding_Fundamentals_II.pdf",
-                image_link:"https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/Coding_fundamental_II.jpg",
+                image_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/Coding_fundamental_II.jpg",
                 file_link: "",
                 valid_until: null,
                 description: "Deepened knowledge in JavaScript fundamentals.",
@@ -218,7 +221,7 @@ let data = {
                 date: "15-05-2022",
                 issued_by: "Grasshopper - Google",
                 validation_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Debugging_Code.pdf",
-                image_link:"https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/Debugging_Code.jpg",
+                image_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/Debugging_Code.jpg",
                 file_link: "",
                 valid_until: null,
                 description: "Developed skills for debugging JavaScript code.",
@@ -228,7 +231,7 @@ let data = {
                 date: "10-02-2021",
                 issued_by: "Grasshopper - Google",
                 validation_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Intro_to_Interviewing.pdf",
-                image_link:"https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/intro_to_interviewing.jpg",
+                image_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/intro_to_interviewing.jpg",
                 file_link: "",
                 valid_until: null,
                 description: "Prepared for JavaScript-related job interviews.",
@@ -238,7 +241,7 @@ let data = {
                 date: "01-06-2022",
                 issued_by: "Grasshopper - Google",
                 validation_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Intro_to_Webpages.pdf",
-                image_link:"https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Intro_to_Webpages.png",
+                image_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Intro_to_Webpages.png",
                 file_link: "",
                 valid_until: null,
                 description:
@@ -249,7 +252,7 @@ let data = {
                 date: "01-06-2022",
                 issued_by: "Grasshopper - Google",
                 validation_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Using_A_Code_Editor.pdf",
-                image_link:"https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Using_A_Code_Editor.png",
+                image_link: "https://raw.githubusercontent.com/naye2m/certificates-files/refs/heads/master/Programming/grasshopper/__new_formate__Using_A_Code_Editor.png",
                 file_link: "",
                 valid_until: null,
                 description:
@@ -557,24 +560,24 @@ let data = {
         ],
     },
     work_experience: [
-        // {
-        //     title: "Junior Developer",
-        //     company: "Freelancing",
-        //     start_date: "2020",
-        //     end_date: "2022",
-        //     description:
-        //         "Worked on various web development projects, focusing on both front-end and back-end aspects.",
-        //     location: "Remote",
-        //     responsibilities: [
-        //         "Developed and maintained websites for small businesses",
-        //         "Implemented front-end designs with HTML, CSS, and JavaScript",
-        //         "Collaborated with clients to meet their needs",
-        //     ],
-        // },
+        {
+            title: "Junior Developer",
+            company: "Freelancing",
+            start_date: "2020",
+            end_date: "2022",
+            description:
+                "Worked on various web development projects, focusing on both front-end and back-end aspects.",
+            location: "Remote",
+            responsibilities: [
+                "Developed and maintained websites for small businesses",
+                "Implemented front-end designs with HTML, CSS, and JavaScript",
+                "Collaborated with clients to meet their needs",
+            ],
+        },
         {
             title: "Full Stack Developer",
             company: "Freelancing",
-            start_date: "2022",
+            start_date: "2023",
             end_date: "Present",
             description:
                 "Developed dynamic web applications, integrated APIs, and optimized performance.",
@@ -727,6 +730,12 @@ let data = {
         },
     ],
     achievements: [
+        {
+            "name": "Microsoft Learn Achievements",
+            "awarded_by": "Microsoft",
+            "date_awarded": "2024-12-01",
+            "description": "Earned 150+ badges and 35+ trophies certifications showcasing expertise in C# programming, Azure DevOps, Azure services, AI and Machine Learning, and DevOps pipelines. More than 100 hours of training completed in Microsoft Learn.  <a href=\"https://learn.microsoft.com/en-us/users/naye2m/transcript\" >Microsoft Transcript link https://learn.microsoft.com/en-us/users/naye2m/transcript</a> ",
+        },
         // {
         //     name: "Best Web Developer 2024",
         //     awarded_by: "TechCon",
@@ -784,6 +793,90 @@ let data = {
         available_for_remotework: true,
         preferred_job_type: "Full-time",
     },
+    services: [
+        {
+            "icon": "laptop2",
+            "title": "Full Stack Dev",
+            "description": "Expert in developing scalable front-end and back-end systems using modern technologies like Django, Node.js, and React."
+        },
+        {
+            "icon": "mobile2",
+            "title": "Responsive Design",
+            "description": "Build visually appealing and mobile-friendly web interfaces optimized for all devices."
+        },
+        {
+            "icon": "code",
+            "title": "API Integration",
+            "description": "Integrate RESTful and GraphQL APIs for seamless communication between services and systems."
+        },
+        {
+            "icon": "database2",
+            "title": "Web Security",
+            "description": "Implement secure authentication, data encryption, and server-side validation for robust applications."
+        },
+        {
+            "icon": "tools2",
+            "title": "E-Commerce Apps",
+            "description": "Develop feature-rich e-commerce solutions, including inventory, cart, and checkout functionalities."
+        },
+        {
+            "icon": "printer2",
+            "title": "ERP Systems",
+            "description": "Design enterprise-level ERP solutions for inventory, sales, and employee management with role-based access."
+        },
+        {
+            "icon": "game-controller",
+            "title": "Game Dev Basics",
+            "description": "Create basic game frontends using tools like Three.js and responsive mechanics for browsers."
+        },
+        // {
+        //     "icon":"magnifying-glass",
+        //     "title": "SEO Optimization",
+        //     "description": "Enhance website visibility and ranking through modern SEO best practices."
+        // },
+        {
+            "icon": "chat",
+            "title": "Custom Dashboards",
+            "description": "Design interactive admin dashboards tailored to track key metrics and manage data effectively."
+        },
+        {
+            "icon": "gauge",
+            "title": "Speed Optimization",
+            "description": "Optimize website performance and load times to ensure a smooth user experience."
+
+        },
+        {
+            "icon": "star-full",
+            "title": "Desing Optimization",
+            "description": "Optimize website design to ensure a consistent user experience across all devices."
+
+        },
+        {
+            "icon": "database",
+            "title": "Database Design",
+            "description": "Develop efficient database schemas and ORM integration using SQL or NoSQL technologies."
+        },
+        {
+            "icon": "chat2",
+            "title": "Support",
+            "description": "Provide support for clients and colleagues, including troubleshooting, debugging, and training."
+        },
+    ]
+
+    // medium_posts:[
+    //     {
+    //         date: "2022-05-01",
+    //         title: "How to Build a Sudoku Solver in C with Backtracking Algorithm",
+    //         link: "https://medium.com/@nayeem.moontreee/how-to-build-a-sudoku-solver-in-c-with-backtracking-algorithm-1a7d5d5d5d9d",
+    //         description: "In this article, I will show you how to build a Sudoku Solver in C with backtracking algorithm. I will also explain the algorithm and how to use it to solve Sudoku puzzles. I will also provide a step-by-step guide on how to compile and run the program on Windows, Linux, and macOS.",
+    //         image: "https://miro.medium.com/max/1400/1*y6j7y9y3-y6j7y9y3.png",
+    //         tags: ["C", "Sudoku", "Algorithm", "Backtracking"],
+    //         likes: 100,
+    //         views: 1000,
+    //         author: "nayeem.moontreee",
+    //         author_image: "https://miro.medium.com/fit/c/96/96/1*y6j7y9y3-y6j7y9y3.png",
+    //     }
+    // ]
 };
 // build to ./about_me.json
 
