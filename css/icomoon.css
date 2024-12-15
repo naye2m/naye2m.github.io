@@ -7,6 +7,8 @@
         url('fonts/icomoon.svg?1oniuf#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
+    /* outside coommon font unicode range (0xf000-0xf8ff) */
+    unicode-range: U+E000-ECA7;
 }
 
 [class^="icon-"], [class*=" icon-"] {
