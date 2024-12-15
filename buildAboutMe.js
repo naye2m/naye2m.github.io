@@ -453,112 +453,154 @@ let data = {
         ], others: [
         ],
     },
-    skills: {
-        programming_languages: [
-            {
-                name: "Python",
-                percent_acquired: "88%",
-                date_acquired: "2023",
-                level: "Advanced",
-            },
-            {
-                name: "JavaScript",
-                percent_acquired: "98%",
-                date_acquired: "2023",
-                level: "Advanced",
-            },
-            {
-                name: "C",
-                percent_acquired: "83%",
-                date_acquired: "2023",
-                level: "Intermediate",
-            },
-            {
-                name: "C++",
-                percent_acquired: "75%",
-                date_acquired: "2023",
-                level: "Basics",
-            },
-            {
-                name: "PHP",
-                percent_acquired: "87%",
-                date_acquired: "2022",
-                level: "Advanced",
-            },
-            {
-                name: "C#",
-                percent_acquired: "87%",
-                date_acquired: "2023",
-                level: "Advanced",
-            },
-        ],
-        web_development: [
-            {
-                name: "React.js",
-                percent_acquired: "85%",
-                date_acquired: "2023",
-                level: "Advanced",
-            },
-            {
-                name: "TypeScript",
-                percent_acquired: "70%",
-                date_acquired: "2023",
-                level: "Intermediate",
-            },
-            {
-                name: "Flask",
-                percent_acquired: "85%",
-                date_acquired: "2023",
-                level: "Advanced",
-            },
-            {
-                name: "Django",
-                percent_acquired: "80%",
-                date_acquired: "2023",
-                level: "Intermediate",
-            },
-            {
-                name: "FastAPI",
-                percent_acquired: "80%",
-                date_acquired: "2023",
-                level: "Intermediate",
-            },
-        ],
-        databases: [
-            {
-                name: "MySQL",
-                percent_acquired: "84%",
-                date_acquired: "2023",
-                level: "Intermediate",
-            },
-            {
-                name: "SQLite3",
-                percent_acquired: "70%",
-                date_acquired: "2023",
-                level: "Beginner",
-            },
-        ],
-        additional_skills: [
-            {
-                name: "Version Control (GIT)",
-                percent_acquired: "90%",
-                date_acquired: "2023",
-                level: "Advanced",
-            },
-            {
-                name: "Linux System Administration",
-                percent_acquired: "70%",
-                date_acquired: "2023",
-                level: "Intermediate",
-            },
-            {
-                name: "Object-Oriented Programming (OOP)",
-                percent_acquired: "92%",
-                date_acquired: "2023",
-                level: "Advanced",
-            },
-        ],
-    },
+    // skills_p: {
+    //     programming_languages: [
+    //         {
+    //             name: "Python",
+    //             percent_acquired: "88%",
+    //             date_acquired: "2023",
+    //             level: "Advanced",
+    //         },
+    //         {
+    //             name: "JavaScript",
+    //             percent_acquired: "98%",
+    //             date_acquired: "2023",
+    //             level: "Advanced",
+    //         },
+    //         {
+    //             name: "C",
+    //             percent_acquired: "83%",
+    //             date_acquired: "2023",
+    //             level: "Intermediate",
+    //         },
+    //         {
+    //             name: "C++",
+    //             percent_acquired: "75%",
+    //             date_acquired: "2023",
+    //             level: "Basics",
+    //         },
+    //         {
+    //             name: "PHP",
+    //             percent_acquired: "87%",
+    //             date_acquired: "2022",
+    //             level: "Advanced",
+    //         },
+    //         {
+    //             name: "C#",
+    //             percent_acquired: "87%",
+    //             date_acquired: "2023",
+    //             level: "Advanced",
+    //         },
+    //     ],
+    //     web_development: [
+    //         {
+    //             name: "React.js",
+    //             percent_acquired: "85%",
+    //             date_acquired: "2023",
+    //             level: "Advanced",
+    //         },
+    //         {
+    //             name: "TypeScript",
+    //             percent_acquired: "70%",
+    //             date_acquired: "2023",
+    //             level: "Intermediate",
+    //         },
+    //         {
+    //             name: "Flask",
+    //             percent_acquired: "85%",
+    //             date_acquired: "2023",
+    //             level: "Advanced",
+    //         },
+    //         {
+    //             name: "Django",
+    //             percent_acquired: "80%",
+    //             date_acquired: "2023",
+    //             level: "Intermediate",
+    //         },
+    //         {
+    //             name: "FastAPI",
+    //             percent_acquired: "80%",
+    //             date_acquired: "2023",
+    //             level: "Intermediate",
+    //         },
+    //     ],
+    //     databases: [
+    //         {
+    //             name: "MySQL",
+    //             percent_acquired: "84%",
+    //             date_acquired: "2023",
+    //             level: "Intermediate",
+    //         },
+    //         {
+    //             name: "SQLite3",
+    //             percent_acquired: "70%",
+    //             date_acquired: "2023",
+    //             level: "Beginner",
+    //         },
+    //     ],
+    //     additional_skills: [
+    //         {
+    //             name: "Version Control (GIT)",
+    //             percent_acquired: "90%",
+    //             date_acquired: "2023",
+    //             level: "Advanced",
+    //         },
+    //         {
+    //             name: "Linux System Administration",
+    //             percent_acquired: "70%",
+    //             date_acquired: "2023",
+    //             level: "Intermediate",
+    //         },
+    //         {
+    //             name: "Object-Oriented Programming (OOP)",
+    //             percent_acquired: "92%",
+    //             date_acquired: "2023",
+    //             level: "Advanced",
+    //         },
+    //     ],
+    // },
+
+    skills: [
+        // Programming Languages
+        { name: "Python", percent_acquired: 88, date_acquired: "2023", level: "Advanced" },
+        { name: "JavaScript", percent_acquired: 98, date_acquired: "2023", level: "Advanced" },
+        { name: "C", percent_acquired: 83, date_acquired: "2023", level: "Intermediate" },
+        { name: "C++", percent_acquired: 75, date_acquired: "2023", level: "Basic" },
+        { name: "PHP", percent_acquired: 87, date_acquired: "2022", level: "Advanced" },
+        { name: "C#", percent_acquired: 87, date_acquired: "2023", level: "Advanced" },
+        { name: "HTML5", percent_acquired: 98, date_acquired: "2022", level: "Advanced" },
+        { name: "CSS3", percent_acquired: 97, date_acquired: "2022", level: "Advanced" },
+        { name: "SQL", percent_acquired: 84, date_acquired: "2023", level: "Intermediate" },
+        { name: "Java", percent_acquired: 80, date_acquired: "2022", level: "Intermediate" },
+
+        // Web Development Frameworks
+        { name: "React.js", percent_acquired: 85, date_acquired: "2023", level: "Advanced" },
+        { name: "TypeScript", percent_acquired: 70, date_acquired: "2023", level: "Intermediate" },
+        { name: "Flask", percent_acquired: 85, date_acquired: "2023", level: "Advanced" },
+        { name: "Django", percent_acquired: 80, date_acquired: "2023", level: "Intermediate" },
+        { name: "FastAPI", percent_acquired: 80, date_acquired: "2023", level: "Intermediate" }
+    ],
+    subskills: [
+        // Databases
+        { name: "MySQL", percent_acquired: 84, date_acquired: "2023", level: "Intermediate" },
+        { name: "SQLite3", percent_acquired: 70, date_acquired: "2023", level: "Beginner" },
+        { name: "PostgreSQL", percent_acquired: 75, date_acquired: "2023", level: "Intermediate" }, // Suggestion: Add PostgreSQL for its growing use in scalable projects.
+
+        // Additional Skills
+        { name: "Version Control (GIT)", percent_acquired: 90, date_acquired: "2023", level: "Advanced" },
+        { name: "Linux System Administration", percent_acquired: 70, date_acquired: "2023", level: "Intermediate" },
+        { name: "Object-Oriented Programming (OOP)", percent_acquired: 92, date_acquired: "2023", level: "Advanced" },
+        { name: "RESTful APIs", percent_acquired: 95, date_acquired: "2023", level: "Advanced" },
+        { name: "Responsive Web Design (RWD)", percent_acquired: 97, date_acquired: "2023", level: "Advanced" },
+        { name: "Debugging", percent_acquired: 85, date_acquired: "2023", level: "Advanced" },
+        { name: "Functional Programming", percent_acquired: 85, date_acquired: "2023", level: "Intermediate" },
+        { name: "3D Design (Three.js)", percent_acquired: 65, date_acquired: "2023", level: "Basic" }, // Suggestion: Improve this for better 3D and game design applications.
+        { name: "Data Structures", percent_acquired: 70, date_acquired: "2023", level: "Intermediate" },
+        { name: "Algorithms", percent_acquired: 70, date_acquired: "2023", level: "Intermediate" },
+        { name: "Command Line Interface (CLI)", percent_acquired: 76, date_acquired: "2023", level: "Intermediate" },
+        { name: "CLI Tools Making", percent_acquired: 85, date_acquired: "2023", level: "Advanced" },
+        { name: "Math Problem Solving", percent_acquired: 96, date_acquired: "2023", level: "Advanced" }
+    ],
     work_experience: [
         {
             title: "Junior Developer",
