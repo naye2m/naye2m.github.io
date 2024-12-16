@@ -53,7 +53,7 @@ type projects= {
     name: string;
     description: string;
     link: string;
-    Image: string;
+    image: string;
     technologies_used: string[];
 }
 
@@ -563,17 +563,17 @@ let data = {
     skills: [
         // Programming Languages
         { name: "Python", percent_acquired: 85, date_acquired: "2023", level: "Advanced" },
-        { name: "JavaScript", percent_acquired: 92, date_acquired: "2023", level: "Advanced" },
+        { name: "JavaScript", percent_acquired: 89, date_acquired: "2023", level: "Advanced" },
         { name: "C", percent_acquired: 83, date_acquired: "2023", level: "Intermediate" },
         { name: "C++", percent_acquired: 75, date_acquired: "2023", level: "Basic" },
-        { name: "PHP", percent_acquired: 87, date_acquired: "2022", level: "Advanced" },
-        { name: "C#", percent_acquired: 87, date_acquired: "2023", level: "Advanced" },
-        { name: "HTML5", percent_acquired: 98, date_acquired: "2022", level: "Advanced" },
-        { name: "CSS3", percent_acquired: 97, date_acquired: "2022", level: "Advanced" },
+        { name: "PHP", percent_acquired: 80, date_acquired: "2022", level: "Advanced" },
+        { name: "C#", percent_acquired: 80, date_acquired: "2023", level: "Advanced" },
+        { name: "HTML5", percent_acquired: 92, date_acquired: "2022", level: "Advanced" },
+        { name: "CSS3", percent_acquired: 93, date_acquired: "2022", level: "Advanced" },
         { name: "SQL", percent_acquired: 84, date_acquired: "2023", level: "Intermediate" },
         { name: "Java", percent_acquired: 68, date_acquired: "2022", level: "Intermediate" },
-        { name: "SQL", percent_acquired: 90, date_acquired: "2022", level: "Intermediate" },
-        { name: "RESTful APIs", percent_acquired: 95, date_acquired: "2022", level: "Advanced" },
+        { name: "RESTful APIs", percent_acquired: 89, date_acquired: "2022", level: "Advanced" },
+        { name: "Django", percent_acquired: 80, date_acquired: "2023", level: "Intermediate" },
 
     ],
     subskills: [
@@ -581,7 +581,6 @@ let data = {
         { name: "React.js", percent_acquired: 80, date_acquired: "2023", level: "Advanced" },
         { name: "TypeScript", percent_acquired: 73, date_acquired: "2023", level: "Intermediate" },
         { name: "Flask", percent_acquired: 80, date_acquired: "2023", level: "Advanced" },
-        { name: "Django", percent_acquired: 80, date_acquired: "2023", level: "Intermediate" },
         { name: "FastAPI", percent_acquired: 75, date_acquired: "2023", level: "Intermediate" },
         { name: "Node.js", percent_acquired: 60, date_acquired: "2023", level: "Basic" },
         { name: "Express.js", percent_acquired: 60, date_acquired: "2023", level: "Intermediate" },
@@ -591,42 +590,42 @@ let data = {
         { name: "SQLite3", percent_acquired: 70, date_acquired: "2023", level: "Basic" },
         { name: "PostgreSQL", percent_acquired: 75, date_acquired: "2023", level: "Intermediate" },
         // Additional Skills
-        { name: "Version Control (GIT)", percent_acquired: 90, date_acquired: "2023", level: "Advanced" },
-        { name: "Linux System Administration", percent_acquired: 70, date_acquired: "2023", level: "Intermediate" },
-        { name: "Object-Oriented Programming (OOP)", percent_acquired: 92, date_acquired: "2023", level: "Advanced" },
+        { name: "Version Control (GIT)", percent_acquired: 80, date_acquired: "2023", level: "Advanced" },
+        { name: "Linux System", percent_acquired: 70, date_acquired: "2023", level: "Intermediate" },
+        { name: "Object-Oriented Programming (OOP)", percent_acquired: 85, date_acquired: "2023", level: "Advanced" },
         { name: "Responsive Web Design (RWD)", percent_acquired: 97, date_acquired: "2023", level: "Advanced" },
         { name: "Debugging", percent_acquired: 85, date_acquired: "2023", level: "Advanced" },
-        { name: "Functional Programming", percent_acquired: 85, date_acquired: "2023", level: "Intermediate" },
+        { name: "Functional Programming", percent_acquired: 89, date_acquired: "2023", level: "Intermediate" },
         { name: "3D Design (Three.js)", percent_acquired: 65, date_acquired: "2023", level: "Basic" }, // Suggestion: Improve this for better 3D and game design applications.
         { name: "Data Structures", percent_acquired: 70, date_acquired: "2023", level: "Intermediate" },
         { name: "Algorithms", percent_acquired: 70, date_acquired: "2023", level: "Intermediate" },
         { name: "Command Line Interface (CLI)", percent_acquired: 76, date_acquired: "2023", level: "Intermediate" },
-        { name: "CLI Tools Making", percent_acquired: 85, date_acquired: "2023", level: "Advanced" },
-        { name: "Math Problem Solving", percent_acquired: 96, date_acquired: "2023", level: "Advanced" },
+        { name: "CLI Tools Making", percent_acquired: 84, date_acquired: "2023", level: "Advanced" },
+        { name: "Math Related Problem Solving", percent_acquired: 93, date_acquired: "2023", level: "Advanced" },
     ],
     work_experience: [
-    /*     {
-            title: "Computer Operator & Phone Technician",
-            company: "Bismillah Telecom",
-            start_date: "12-2023",
-            end_date: "06-2024",
-            description:
-                "Provided technical support, repaired devices, and developed innovative solutions for operational efficiency in a small business environment.",
-            location: "Onsite (Part-time)",
-            responsibilities: [
-                "Assisted junior technicians and beginner computer operators.",
-                "Provided technical support for PC and phone hardware/software issues.",
-                "Streamlined operations as the sole computer operator in a small business.",
-                "Repaired approximately 15 devices daily.",
-                "Assisted 10–15 clients weekly with technical support, achieving a ~95% success rate.",
-                "Delivered MS Office document support to ~20 satisfied customers daily."
-            ],
-            key_achievements: [
-                "Developed an Online Voucher Feature that included QR code stamping for online validation.",
-                "Enabled scanning of QR codes to access, validate, or print an online copy of vouchers.",
-                "Automated email delivery of vouchers to customers."
-            ]
-        }, */
+        /*     {
+                title: "Computer Operator & Phone Technician",
+                company: "Bismillah Telecom",
+                start_date: "12-2023",
+                end_date: "06-2024",
+                description:
+                    "Provided technical support, repaired devices, and developed innovative solutions for operational efficiency in a small business environment.",
+                location: "Onsite (Part-time)",
+                responsibilities: [
+                    "Assisted junior technicians and beginner computer operators.",
+                    "Provided technical support for PC and phone hardware/software issues.",
+                    "Streamlined operations as the sole computer operator in a small business.",
+                    "Repaired approximately 15 devices daily.",
+                    "Assisted 10–15 clients weekly with technical support, achieving a ~95% success rate.",
+                    "Delivered MS Office document support to ~20 satisfied customers daily."
+                ],
+                key_achievements: [
+                    "Developed an Online Voucher Feature that included QR code stamping for online validation.",
+                    "Enabled scanning of QR codes to access, validate, or print an online copy of vouchers.",
+                    "Automated email delivery of vouchers to customers."
+                ]
+            }, */
         {
             title: "Junior Developer",
             company: "Freelancing",
@@ -691,11 +690,11 @@ let data = {
     ],
     projects: [
         {
-            name: "Wiki Clone",
+            name: "Encyclopedia",
             description:
-                "A responsive web platform that accepts content in Markdown files. Includes search functionality, random page, editing, and optimized UI.",
+                "A responsive Wiki like web platform that accepts content in Markdown files. Includes search functionality, random page, editing, and optimized UI.",
             link: "https://projwiki.moontreee.com",
-            Image: "",
+            image: "https://raw.githubusercontent.com/naye2m/image-store/refs/heads/main/webapps_screenshots_single/encyclopedia.png",
             technologies_used: [
                 "HTML",
                 "CSS",
@@ -710,7 +709,7 @@ let data = {
             description:
                 "Developed a dynamic e-commerce platform with features like user authentication, product listing, watchlist, and product categorization. Includes bidding, commenting, and user-specific pages.",
             link: "https://projauction.moontreee.com",
-            Image: "",
+            image: "https://raw.githubusercontent.com/naye2m/image-store/refs/heads/main/webapps_screenshots_single/auction.png",
             technologies_used: [
                 "HTML",
                 "CSS",
@@ -727,7 +726,7 @@ let data = {
             description:
                 "Built a seamless SPA with API integration. Features email composition, reading, replying, archiving, and sending to multiple recipients. Optimized UI for better user experience.",
             link: "https://projmail.moontreee.com",
-            Image: "",
+            image: "https://raw.githubusercontent.com/naye2m/image-store/refs/heads/main/webapps_screenshots_single/mailapp.png",
             technologies_used: [
                 "HTML",
                 "CSS",
@@ -744,7 +743,7 @@ let data = {
             description:
                 "A social networking app with functionalities such as tweeting, commenting, liking/unliking posts, and profile organization. Includes pagination, following features, and post editing.",
             link: "https://projnetwork.moontreee.com",
-            Image: "",
+            image: "https://raw.githubusercontent.com/naye2m/image-store/refs/heads/main/webapps_screenshots_single/network.png",
             technologies_used: [
                 "HTML",
                 "CSS",
@@ -761,7 +760,7 @@ let data = {
             description:
                 "The Sudoku Solver project, implemented in C with a backtracking algorithm, includes both a command-line tool and a web interface via Flask. Users can input puzzles manually or as a string and share solutions via URLs. Also have features like API, CLI and others mini featues.",
             link: "https://github.com/naye2m/sudoku-solver",
-            Image: "",
+            image: "https://raw.githubusercontent.com/naye2m/image-store/refs/heads/main/webapps_screenshots_single/sudoku.solver.png",
             technologies_used: [
                 "HTML",
                 "CSS",
@@ -776,23 +775,37 @@ let data = {
         {
             name: "Vouchering Web App",
             description:
-                "Developed a web app for generating and validating QR-coded vouchers with automatic email delivery. Implemented using Google Apps Script, allowing easy voucher entry without database dependency.",
-            link: "",
-            Image: "",
+                "Developed a web application for managing vouchers with a simple interface. Features include Google Apps Script integration for automation, easy product entry, and flexible printing options. Requires no database setup.",
+            link: "https://naye2m.github.io/institutevouchering/",
+            github_repo: "https://github.com/naye2m/institutevouchering",
+            image: "https://raw.githubusercontent.com/naye2m/image-store/refs/heads/main/webapps_screenshots_single/institutevouchering.png",
             technologies_used: [
                 "HTML",
                 "CSS",
                 "JavaScript",
-                "Google Apps Script",
+                "Google Apps Script"
+            ]
+        },
+        {
+            name: "Online Voucher Feature",
+            description:
+                "Designed an innovative feature for QR-stamped vouchers, enabling online validation, viewing, and printing via QR code scanning. Includes automated email delivery for customer convenience.",
+            link: "https://naye2m.github.io/instituteonlinevoucher/?demo=true",
+            github_repo: "https://github.com/naye2m/instituteonlinevoucher",
+            image: "https://raw.githubusercontent.com/naye2m/image-store/refs/heads/main/webapps_screenshots_single/instituteonlinevoucher.png",
+            technologies_used: [
+                "HTML",
+                "CSS",
                 "JavaScript",
-            ],
+                "QRcode.js"
+            ]
         },
         {
             name: "FPS Ball Shooting Game (Three.js)",
             description:
                 "Developed a first-person ball-shooting game using Three.js. The game focused on simple mechanics and 3D environments for interactive gameplay.",
             link: "https://github.com/naye2m/fpsgamefrontend",
-            Image: "",
+            image: "https://raw.githubusercontent.com/naye2m/image-store/refs/heads/main/webapps_screenshots_single/fpsgamefrontend.png",
             technologies_used: ["HTML", "CSS", "ReactJS", "Three.js", "JavaScript"],
         },
     ],
