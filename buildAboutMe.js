@@ -417,17 +417,17 @@ let data = {
                 valid_until: null,
                 description: "SQL for relational database management.",
             },
-            {
-                name: "SQL",
-                date: "04-10-2023",
-                issued_by: "Sololearn",
-                validation_link:
-                    "https://www.sololearn.com/Certificate/CC-ABND5T1G/pdf",
-                image_link: "https://www.sololearn.com/Certificate/CC-ABND5T1G/png",
-                file_link: "",
-                valid_until: null,
-                description: "SQL for relational database management.",
-            },
+            // {
+            //     name: "SQL",
+            //     date: "04-10-2023",
+            //     issued_by: "Sololearn",
+            //     validation_link:
+            //         "https://www.sololearn.com/Certificate/CC-ABND5T1G/pdf",
+            //     image_link: "https://www.sololearn.com/Certificate/CC-ABND5T1G/png",
+            //     file_link: "",
+            //     valid_until: null,
+            //     description: "SQL for relational database management.",
+            // },
             {
                 name: "SQL Intermediate",
                 date: "04-10-2023",
@@ -439,17 +439,17 @@ let data = {
                 valid_until: null,
                 description: "Proficient in SQL and MySQL.",
             },
-            {
-                name: "SQL",
-                date: "04-10-2023",
-                issued_by: "Sololearn",
-                validation_link:
-                    "https://www.sololearn.com/Certificate/CC-ABND5T1G/pdf",
-                image_link: "https://www.sololearn.com/Certificate/CC-ABND5T1G/png",
-                file_link: "",
-                valid_until: null,
-                description: "Proficient in MySQL for relational database management.",
-            },
+            // {
+            //     name: "SQL",
+            //     date: "04-10-2023",
+            //     issued_by: "Sololearn",
+            //     validation_link:
+            //         "https://www.sololearn.com/Certificate/CC-ABND5T1G/pdf",
+            //     image_link: "https://www.sololearn.com/Certificate/CC-ABND5T1G/png",
+            //     file_link: "",
+            //     valid_until: null,
+            //     description: "Proficient in MySQL for relational database management.",
+            // },
         ], others: [
         ],
     },
