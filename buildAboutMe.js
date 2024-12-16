@@ -453,7 +453,7 @@ let data = {
         ], others: [
         ],
     },
-/*     skills_p: {
+    /*     skills_p: {
         programming_languages: [
             {
                 name: "Python",
@@ -583,10 +583,13 @@ let data = {
         { name: "Flask", percent_acquired: 80, date_acquired: "2023", level: "Advanced" },
         { name: "Django", percent_acquired: 80, date_acquired: "2023", level: "Intermediate" },
         { name: "FastAPI", percent_acquired: 75, date_acquired: "2023", level: "Intermediate" },
+        { name: "Node.js", percent_acquired: 60, date_acquired: "2023", level: "Basic" },
+        { name: "Express.js", percent_acquired: 60, date_acquired: "2023", level: "Intermediate" },
+        { name: "mongoDB", percent_acquired: 65, date_acquired: "2023", level: "Intermediate" },
+
         // Databases
         { name: "SQLite3", percent_acquired: 70, date_acquired: "2023", level: "Basic" },
-        { name: "PostgreSQL", percent_acquired: 75, date_acquired: "2023", level: "Intermediate" }, // Suggestion: Add PostgreSQL for its growing use in scalable projects.
-
+        { name: "PostgreSQL", percent_acquired: 75, date_acquired: "2023", level: "Intermediate" },
         // Additional Skills
         { name: "Version Control (GIT)", percent_acquired: 90, date_acquired: "2023", level: "Advanced" },
         { name: "Linux System Administration", percent_acquired: 70, date_acquired: "2023", level: "Intermediate" },
@@ -602,6 +605,28 @@ let data = {
         { name: "Math Problem Solving", percent_acquired: 96, date_acquired: "2023", level: "Advanced" },
     ],
     work_experience: [
+    /*     {
+            title: "Computer Operator & Phone Technician",
+            company: "Bismillah Telecom",
+            start_date: "12-2023",
+            end_date: "06-2024",
+            description:
+                "Provided technical support, repaired devices, and developed innovative solutions for operational efficiency in a small business environment.",
+            location: "Onsite (Part-time)",
+            responsibilities: [
+                "Assisted junior technicians and beginner computer operators.",
+                "Provided technical support for PC and phone hardware/software issues.",
+                "Streamlined operations as the sole computer operator in a small business.",
+                "Repaired approximately 15 devices daily.",
+                "Assisted 10–15 clients weekly with technical support, achieving a ~95% success rate.",
+                "Delivered MS Office document support to ~20 satisfied customers daily."
+            ],
+            key_achievements: [
+                "Developed an Online Voucher Feature that included QR code stamping for online validation.",
+                "Enabled scanning of QR codes to access, validate, or print an online copy of vouchers.",
+                "Automated email delivery of vouchers to customers."
+            ]
+        }, */
         {
             title: "Junior Developer",
             company: "Freelancing",
@@ -611,10 +636,10 @@ let data = {
                 "Worked on various web development projects, focusing on both front-end and back-end aspects.",
             location: "Remote",
             responsibilities: [
-                "Developed and maintained websites for small businesses",
-                "Implemented front-end designs with HTML, CSS, and JavaScript",
-                "Collaborated with clients to meet their needs",
-            ],
+                "Developed and maintained websites for small businesses.",
+                "Implemented front-end designs with HTML, CSS, and JavaScript.",
+                "Collaborated with clients to meet their needs."
+            ]
         },
         {
             title: "Full Stack Developer",
@@ -625,11 +650,11 @@ let data = {
                 "Developed dynamic web applications, integrated APIs, and optimized performance.",
             location: "Remote",
             responsibilities: [
-                "Built full-stack applications using client preferred technologies",
-                "Created RESTful APIs and optimized performance",
-                "Collaborated with clients to ensure their requirements were met",
-            ],
-        },
+                "Built full-stack applications using client-preferred technologies.",
+                "Created RESTful APIs and optimized performance.",
+                "Collaborated with clients to ensure their requirements were met."
+            ]
+        }
     ],
     education: [
         {
@@ -751,7 +776,7 @@ let data = {
         {
             name: "Vouchering Web App",
             description:
-                "Developed a web app for generating and validating QR-coded vouchers with automatic email delivery. Implemented using Google Apps Script, allowing easy voucher entry without a database.",
+                "Developed a web app for generating and validating QR-coded vouchers with automatic email delivery. Implemented using Google Apps Script, allowing easy voucher entry without database dependency.",
             link: "",
             Image: "",
             technologies_used: [
@@ -921,44 +946,65 @@ let data = {
     // ]
 };
 // build to ./about_me.json
+const { argv } = require('node:process');
+// print process.argv
+// argv.forEach((val, index) => {
+//   console.log(`${index}: ${val}`);
+// });
 
+let minify = argv.includes("minify");
+if (minify) {
+    // remove long string values recursively
+    function remove_long_strings(obj, len, convertto) {
+        for (let key in obj) {
+            if (typeof obj[key] === "object") {
+                remove_long_strings(obj[key], len, convertto);
+            } else if (typeof obj[key] === "string" && obj[key].length > len) {
+                obj[key] = obj[key].slice(0, convertto) + "...";
+            }
+        }
+        data.skills = [];
+        data.subskills = [];
+    }
+    remove_long_strings(data, 40, 10);
+}
 
 function add_certificate_to_data() {
     data.certificates = [];
     for (const certificate_type in data.certifications_types) {
-        // console.log(certificate_type);
+        let category = certificate_type.replace("_", " ");
+        if (category.endsWith("s"))
+            category = category.slice(0, -1);
+
         for (const certificate in data.certifications_types[certificate_type]) {
-
             let certificate_obj = { ...data.certifications_types[certificate_type][certificate] };
-            certificate_obj.category = certificate_type.replace("_", " ");
-            if (certificate_obj.category.endsWith("s"))
-                certificate_obj.category = certificate_obj.category.slice(0, -1);
-
+            certificate_obj.category = category;
             data.certificates.push(certificate_obj);
         }
     }
+    return true;
 }
 
 function build() {
-
-    add_certificate_to_data();
-
+    if (!minify)
+        add_certificate_to_data();
+    else
+        console.log("Skipping certificate data");
 
     try {
-
-        fs = require("fs");
-        function build() {
+        const fs = require("fs");
+        function writeToFile() {
             const JSON_str = JSON.stringify(data);
-            fs.writeFile("about_me.json", JSON_str, console.error);
+            const FILENAME = `about_me${minify ? "_min" : ""}.json`;
+            fs.writeFile(FILENAME, JSON_str, console.error);
         }
-        build();
+        writeToFile();
         console.log('%c\x1b[32mDone!\x1b[0m ', 'background: #222; color: #bada55');
         console.log('%c\x1b[33mReady To Go!\x1b[0m ', 'background: #222; color: #bada55');
     } catch (error) {
         console.log("\x1b[31mError: \x1b[0m", "Could not write to file\x1b[0m");
         throw error;
     }
-
 }
 
 build();

@@ -57,8 +57,6 @@ a {
 
 p {
 	margin-bottom: 30px;
-	
-
 }
 
 h1,
@@ -74,10 +72,11 @@ figure {
 	margin: 0 0 20px 0;
 }
 
-@mixin selection-styles(){
+@mixin selection-styles() {
 	color: $brand-white;
 	background: $brand-selection-color;
 }
+
 ::-webkit-selection {
 	@include selection-styles()
 }
@@ -104,8 +103,8 @@ figure {
 
 	.overlay {
 		position: absolute;
-		inset:0; 
-		background: color.adjust(rgba($brand-primary, .7),$lightness: 10% );
+		inset: 0;
+		background: color.adjust(rgba($brand-primary, .7), $lightness: 10%);
 	}
 
 	.display-t {
@@ -223,8 +222,10 @@ figure {
 			filter: drop-shadow(3px 8px 1px #0005);
 			transform: scale(1.25);
 		}
+
 		ul.naye2m-social-icons {
 			$icon-color: $brand-white;
+
 			li {
 				a {
 					transition-timing-function: ease-out;
@@ -254,29 +255,32 @@ figure {
 
 			&:has(>li>a:hover) {
 				$icon-shadow: 2px 2px 0px rgba(color.change($brand-primary, $lightness: 25%), .2);
-				
+
 				// hovered tag 
 				& li {
-					a{
+					a {
 						transform: rotate3d(1, 0, 1, -25deg) scale3d(1, 1, 20.5);
 						animation: none;
 					}
+
 					a:hover {
 						background: $brand-white;
 						// transform: scale(1.25);
 						box-shadow: 0 0 10px rgba($brand-white, .5);
 						text-shadow: $icon-shadow;
-			
+
 						scale: 1.5;
 						rotate: 350deg;
-			
+						margin: 0 20px;
+
 						$icon-color: $brand-primary;
 						color: $icon-color;
+
 						svg {
 							fill: $icon-color;
 							filter: drop-shadow($icon-shadow);
 						}
-			
+
 					}
 
 					a:not(:hover) {
@@ -286,7 +290,8 @@ figure {
 
 					&:has(+li>a:hover),
 					&:has(a:hover)+li {
-					// both side 
+
+						// both side 
 						a {
 
 							height: 50px;
@@ -297,14 +302,15 @@ figure {
 							border-radius: 15px;
 							scale: 1;
 							rotate: -40deg;
+							margin: 0 10px;
 
-						$icon-color: $brand-primary;
-						color: $icon-color;
-			
-						svg {
-							fill: $icon-color;
-							filter: drop-shadow($icon-shadow);
-						}						
+							$icon-color: $brand-primary;
+							color: $icon-color;
+
+							svg {
+								fill: $icon-color;
+								filter: drop-shadow($icon-shadow);
+							}
 						}
 					}
 				}
@@ -317,12 +323,27 @@ figure {
 #naye2m-features {
 	background: $brand-primary;
 
+
 	h2 {
 		color: $brand-white;
 	}
 
 	.services-padding {
 		padding: 7em 0;
+
+		&>.row:nth-child(2) {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-content: space-around;
+			justify-content: center;
+			align-items: flex-start;
+
+			>.col-md-4.text-center {
+				flex: 300px;
+			}
+		}
+
 	}
 
 	.feature-left {
@@ -376,6 +397,7 @@ figure {
 		}
 	}
 }
+
 #naye2m-about,
 #naye2m-resume,
 #naye2m-skills,
@@ -415,8 +437,8 @@ figure {
 			margin: 0 auto;
 		}
 	}
-
 }
+
 #naye2m-started {
 	border-bottom: none;
 }
@@ -424,7 +446,6 @@ figure {
 .naye2m-bg-color {
 	background: rgba($brand-primary, 1%);
 	z-index: -1;
-
 }
 
 .naye2m-bg-dark {
@@ -525,7 +546,6 @@ figure {
 			}
 		}
 	}
-	
 }
 
 
@@ -646,6 +666,20 @@ figure {
 
 				&:after {
 					top: 31px;
+				}
+			}
+
+			a {
+				background: rgba($brand-primary, .25);
+				border-radius: 5px;
+				padding: 0 5px;
+				color: $brand-primary;
+
+				&:hover {
+					background: rgba($brand-primary, .6);
+					color: $brand-white;
+					font-weight: bold;
+
 				}
 			}
 		}
@@ -1193,7 +1227,6 @@ figure {
 		box-shadow: none;
 		border: 2px solid rgba(0, 0, 0, .8);
 	}
-
 }
 
 input[type="text"] {
@@ -1504,40 +1537,40 @@ input[type="text"] {
 }
 
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  height: 34px;
-  width: 75%;
-  border: 0;
-  border-top: 2px solid $brand-primary;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	height: 34px;
+	width: 75%;
+	border: 0;
+	border-top: 2px solid $brand-primary;
 }
 
 /*here you can get code for the responsive scroll bar*/
 
 // Scrollbar
-$scrollbar-color: linear-gradient(
-	to top, $brand-primary, rgba($brand-primary, 0.5
-	));
-::-webkit-scrollbar {
-  width: 6px;
+$scrollbar-color: linear-gradient(to top, $brand-primary, rgba($brand-primary, 0.5));
 
-  &:hover {
-    width: 10px;
-  }
-  rotate: 90deg;
+::-webkit-scrollbar {
+	width: 6px;
+
+	&:hover {
+		width: 10px;
+	}
+
+	rotate: 90deg;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba($brand-primary, .5);
-  opacity: 0.5;
+	background: rgba($brand-primary, .5);
+	opacity: 0.5;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  width: 6px;
-  margin: 0 2px;
-  background: $scrollbar-color;
-  animation: hue-rotate-animation 3s ease-in-out infinite;
+	border-radius: 5px;
+	width: 6px;
+	margin: 0 2px;
+	background: $scrollbar-color;
+	animation: hue-rotate-animation 3s ease-in-out infinite;
 }
 
 
@@ -1545,30 +1578,34 @@ $scrollbar-color: linear-gradient(
 
 @keyframes hue-rotate-animation {
 
-  0%, 100% {
-    filter: hue-rotate(0deg);
-  }
+	0%,
+	100% {
+		filter: hue-rotate(0deg);
+	}
 
-  50% {
-    filter: hue-rotate(360deg);
-  }
+	50% {
+		filter: hue-rotate(360deg);
+	}
 }
 
 @keyframes glow {
-	100%, 0% {
+
+	100%,
+	0% {
 		filter: drop-shadow(1px 1px 9px #fff8) drop-shadow(1px 1px 3px #fff8);
-		}
+	}
+
 	50% {
 		filter: drop-shadow(0px 0px 0px #fff8) drop-shadow(0px 0px 0px #fff8);
 	}
 }
 
 .justi {
-  text-align: justify;
+	text-align: justify;
 }
 
 
-.glow{
+.glow {
 	// filter: drop-shadow(1px 1px 9px #fff8) drop-shadow(1px 1px 3px #fff8);
 	@include glow-animation;
 }

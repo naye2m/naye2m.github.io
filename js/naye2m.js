@@ -90,10 +90,10 @@ class Text_glitch_effect {
   }
 }
 const nameblock = document.getElementById("Naye2m-nameBlock");
-const texts = [nameblock.innerText, nameblock.dataset.value, nameblock.dataset.value.toUpperCase(), "Nayeem"];
+const texts = window.USERDATA_NAYE2M?.names ?? [nameblock.innerText, nameblock.dataset.value, nameblock.dataset.value.toUpperCase(), "Nayeem"];
 const nameblockeff = new Text_glitch_effect(nameblock, texts, 2, true, 10000, "!@#$%^&*()+_=-");
 // <                                                                        
-let jobLists = [
+let jobLists =window.USERDATA_NAYE2M?.titles ?? [
   "Website Devloper",
   "Programmer",
   "UI/UX Designer",

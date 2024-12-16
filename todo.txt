@@ -1,0 +1,2 @@
+* add a option to print cv from website
+* add marquee animations to landing divv
