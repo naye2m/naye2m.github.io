@@ -829,6 +829,8 @@ figure {
   width: 100%;
   display: table;
   overflow: hidden;
+  background-color: rgba(255, 144, 0, 0.05);
+  background-blend-mode: multiply;
 }
 @media screen and (max-width: 768px) {
   .work {
@@ -865,6 +867,10 @@ figure {
   transition: transform 0.3s, opacity 0.3s;
   -webkit-transform: translate3d(0, 15px, 0);
   transform: translate3d(0, 15px, 0);
+  margin: 0 10px;
+  padding: 5px 0;
+  overflow-y: auto;
+  height: 50%;
 }
 @media screen and (max-width: 768px) {
   .work .desc {
@@ -1458,6 +1464,14 @@ hr {
 
 .glow {
   animation: glow 1s ease-in-out infinite;
+}
+
+.progress-striped .progress-bar,
+.progress-bar-striped {
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

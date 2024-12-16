@@ -95,9 +95,6 @@ class userInfo {
         this.addWaitingFunction(func);
     }
     updateElementsContents() {
-        // console.log(document.readyState !== "loading" )
-        // console.log(document.readyState !== "interactive" )
-        // console.log(document.readyState !== "complete" )
         if (!this.domLoaded)
             return window.addEventListener("DOMContentLoaded", e => this.updateElementsContents());
         const elements = Array.from(document.querySelectorAll("[data-elem-for]"));
@@ -105,10 +102,12 @@ class userInfo {
         for (let elem in elements) {
             elems[elements[elem]?.dataset?.elemFor] = elements[elem];
         }
-        console.log(elems)
-        // elems key ["name","title","social_media","personal_info","full_name_uppercase","email","phone","website","mailing_address","about_me","work_experience","education","certificates","services","skills","subskills","projects","undefined"]
         if(window.USERDATA_NAYE2M == undefined)
             return;
+
+        let loading_screen = document.querySelector(".naye2m-loader");
+        loading_screen.style.display = "unset";
+
         elems.full_name.innerText = window.USERDATA_NAYE2M.personal_info.full_name;
         elems.title.innerText = window.USERDATA_NAYE2M.personal_info.title;
 
@@ -212,9 +211,8 @@ class userInfo {
             .map(get_subskills__html).join("");
 
         function get_project__html(proj) {
-             return `<div class="container">
-                <div class="col-md-3 text-center col-padding animate-box">
-                    <a href="${proj.link}" class="work" style="background-image: url(${proj.Image});">
+            return `<div class="col-md-3 text-center col-padding animate-box fadeInUp animated-fast">
+                    <a href="${proj.link}" class="work" style="background-image: url(${proj.image || "images/portfolio-1.jpg"});">
                         <div class="desc">
                             <h3>${proj.name}</h3>
                             <span>${proj.description}</span>
@@ -226,8 +224,11 @@ class userInfo {
 
         elems.projects.innerHTML = window.USERDATA_NAYE2M.projects
             .map(get_project__html).join("");
+        
+        elems.contractbox.href = `mailto:${window.USERDATA_NAYE2M.personal_info.email}?body=Please%20provide%20me%20with%20a%20brief%20description.%20Thank%20you%20for%20your%20time.%0A%0A%0A`
 
 
+        loading_screen.style.display = "none";
     }
 }
 var userinfo = new userInfo();

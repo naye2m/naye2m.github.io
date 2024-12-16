@@ -899,6 +899,8 @@ figure {
 	width: 100%;
 	display: table;
 	overflow: hidden;
+	background-color: rgba($brand-primary, 5%);
+    background-blend-mode: multiply;
 
 	@media screen and (max-width: $screen-sm) {
 		height: 400px;
@@ -932,6 +934,11 @@ figure {
 			transition: transform 0.3s, opacity 0.3s;
 			-webkit-transform: translate3d(0, 15px, 0);
 			transform: translate3d(0, 15px, 0);
+			// for making every element in the same size
+			margin: 0 10px;
+			padding: 5px 0;
+			overflow-y: auto;
+			height: 50%;	
 		}
 
 		@media screen and (max-width: $screen-sm) {
@@ -1608,4 +1615,10 @@ $scrollbar-color: linear-gradient(to top, $brand-primary, rgba($brand-primary, 0
 .glow {
 	// filter: drop-shadow(1px 1px 9px #fff8) drop-shadow(1px 1px 3px #fff8);
 	@include glow-animation;
+}
+
+.progress-striped .progress-bar,
+.progress-bar-striped {
+	@include gradient-striped(rgba($brand-white, 0.5),-45deg);
+	background-size: 40px 40px;
 }
