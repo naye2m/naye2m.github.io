@@ -226,7 +226,12 @@ class userInfo {
             .map(get_project__html).join("");
         
         elems.contractbox.href = `mailto:${window.USERDATA_NAYE2M.personal_info.email}?body=Please%20provide%20me%20with%20a%20brief%20description.%20Thank%20you%20for%20your%20time.%0A%0A%0A`
-
+        // {"name":"CS50X: Introduction to Computer Science (2023)","date":"2023","issued_by":"Harvard University","validation_link":"https://certificates.cs50.io/896753ec-89b3-4367-b947-4d7c300a7bc0.pdf?size=A4","image_link":"https://certificates.cs50.io/896753ec-89b3-4367-b947-4d7c300a7bc0.png?size=A4","file_link":"","valid_until":null,"description":"Completed with 100% score. A strong foundation in programming fundamentals, algorithms, and web development.","category":"course"}
+        function get_certificate_image_html(e) {
+            return `<a href="${e.validation_link}" target="_blank" ><div class="verify-box" >Verify</div><img src="${e.image_link}" alt="${e.name}"></a>`;
+        }
+        elems.certification_images.innerHTML = window.USERDATA_NAYE2M.certificates.filter(e=>e.image_link && e.validation_link)
+        .map(get_certificate_image_html).join("");
 
         loading_screen.style.display = "none";
     }
