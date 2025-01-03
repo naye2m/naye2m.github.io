@@ -808,11 +808,29 @@ let data = {
             image: "https://raw.githubusercontent.com/naye2m/image-store/refs/heads/main/webapps_screenshots_single/fpsgamefrontend.png",
             technologies_used: ["HTML", "CSS", "ReactJS", "Three.js", "JavaScript"],
         },
+        {
+            name: "ESP8266 Wi-Fi Controller API",
+            description:
+                "An IoT project enabling device control via HTTP-based API using the ESP8266 module. Features include adaptive network hosting, image display with custom compression algorithms, and a web-based interface for real-time image management.",
+            link: "https://github.com/yourusername/ESP8266-WiFi-Controller",
+            image: "https://raw.githubusercontent.com/yourusername/image-store/main/esp8266_project_screenshot.png",
+            technologies_used: [
+                "C++",
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Arduino IDE",
+                "Bash",
+                "HTTP",
+                "Wi-Fi Configuration",
+            ],
+        },
+
     ],
     achievements: [
         {
             "name": "Microsoft Learn Achievements",
-            "awarded_by": "Microsoft",
+            "awarded_by": "Microsoft (testinoinal)",
             "date_awarded": "2024-12-01",
             "description": "Earned 150+ badges and 35+ trophies certifications showcasing expertise in C# programming, Azure DevOps, Azure services, AI and Machine Learning, and DevOps pipelines. More than 100 hours of training completed in Microsoft Learn.  <a href=\"https://learn.microsoft.com/en-us/users/naye2m/transcript\" >Microsoft Transcript link https://learn.microsoft.com/en-us/users/naye2m/transcript</a> ",
         },
