@@ -17,6 +17,11 @@ body {
 	background: $brand-bg-white;
 }
 
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 #page {
 	position: relative;
 	overflow-x: hidden;
@@ -218,7 +223,7 @@ figure {
 			margin-bottom: 30px;
 			// border: 1px solid rgba($brand-white,1);
 			@include border-radius(50%);
-			background: url(images/user-3.jpg.png);
+			background: url(images/naye2m_nayeem_phpto.png);
 			filter: drop-shadow(3px 8px 1px #0005);
 			transform: scale(1.25);
 		}
@@ -870,6 +875,14 @@ figure {
 	position: relative;
 	text-align: center;
 
+	// todo make it animate
+	// transition: all 0.3s;
+	// background: repeating-radial-gradient(#ffbc6655, transparent 24%);
+	// border-radius: 50%;
+	// text-shadow: 1px 1px 1px #0005;
+    // border-radius: 50%;
+    // border-radius: 30%;
+
 	span {
 		strong {
 			display: block;
@@ -900,7 +913,7 @@ figure {
 	display: table;
 	overflow: hidden;
 	background-color: rgba($brand-primary, 5%);
-    background-blend-mode: multiply;
+	background-blend-mode: multiply;
 
 	@media screen and (max-width: $screen-sm) {
 		height: 400px;
@@ -938,19 +951,23 @@ figure {
 			margin: 0 10px;
 			padding: 5px 0;
 			overflow-y: auto;
-			height: 50%;	
+			height: 50%;
 		}
 
 		@media screen and (max-width: $screen-sm) {
 			opacity: 1;
-			background: rgba($brand-white, .6);
+			background: rgba($brand-white, .9);
+
 
 			h3 {
 				-webkit-transform: translate3d(0, 0, 0);
 				transform: translate3d(0, 0, 0);
+				font-weight: bolder;
 			}
 
 			span {
+				color: black;
+				font-weight: bolder;
 				-webkit-transform: translate3d(0, 0, 0);
 				transform: translate3d(0, 0, 0);
 			}
@@ -1619,6 +1636,109 @@ $scrollbar-color: linear-gradient(to top, $brand-primary, rgba($brand-primary, 0
 
 .progress-striped .progress-bar,
 .progress-bar-striped {
-	@include gradient-striped(rgba($brand-white, 0.5),-45deg);
+	@include gradient-striped(rgba($brand-white, 0.5), -45deg);
 	background-size: 40px 40px;
+}
+
+div.marquee>div {
+	--fullwidth: -337em;
+	--marquee-width: calc(var(--fullwidth) - 100%);
+	height: 200px;
+	animation: marquee-certificates 45s linear infinite;
+
+	&:hover {
+		// stop the marquee
+		animation-play-state: paused;
+	}
+
+	>a {
+		max-height: 200px;
+		height: 200px;
+		margin: 0 2em;
+		display: inline-block;
+		position: relative;
+		box-sizing: border-box;
+		border: 1px solid #0004;
+
+		.verify-box {
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: rgba(0, 0, 0, 0.5);
+			color: #fff;
+			font-size: 14px;
+			font-weight: bold;
+			text-transform: uppercase;
+			border-radius: 0 0 0 50px;
+			z-index: 1;
+			-webkit-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			/* inset: 0; */
+			transition: all .3s ease;
+			width: 0;
+			height: 0;
+			box-sizing: border-box;
+			overflow: hidden;
+
+			@include transitionWithSec(.3s);
+		}
+
+		&:hover {
+			.verify-box {
+				padding: 10px;
+				width: 100%;
+				height: 100%;
+				font-size: 2em;
+				padding: calc(50% - 2em) 0;
+				text-align: center;
+			}
+		}
+
+		>img {
+			max-height: 100%;
+			height: 100%;
+			// background: #ff9000;
+		}
+	}
+}
+
+// .marquee {
+// 	white-space: nowrap;
+// 	overflow: hidden;
+// 	box-sizing: border-box;
+// 	height: 100px;
+
+
+// 	.marquee * {
+// 		display: inline-block;
+// 		// padding-left: 100%;
+// 		animation: marquee 15s linear infinite;
+// 	}
+// }
+
+.marquee {
+	width: 100%;
+	line-height: 50px;
+	// background-color: red;
+	color: white;
+	white-space: nowrap;
+	overflow: hidden;
+	box-sizing: border-box;
+
+	>* {
+		display: inline-block;
+		padding-left: 100%;
+		animation: marquee 15s linear infinite;
+	}
+}
+
+@keyframes marquee-certificates {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(calc(-337em - 100%), 0);
+	}
 }

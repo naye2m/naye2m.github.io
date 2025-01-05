@@ -14,6 +14,11 @@ body {
   background: #fafafa;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 #page {
   position: relative;
   overflow-x: hidden;
@@ -219,7 +224,7 @@ figure {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
-  background: url(images/user-3.jpg.png);
+  background: url(images/naye2m_nayeem_phpto.png);
   filter: drop-shadow(3px 8px 1px rgba(0, 0, 0, 0.3333333333));
   transform: scale(1.25);
 }
@@ -875,13 +880,16 @@ figure {
 @media screen and (max-width: 768px) {
   .work .desc {
     opacity: 1;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.9);
   }
   .work .desc h3 {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+    font-weight: bolder;
   }
   .work .desc span {
+    color: black;
+    font-weight: bolder;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
@@ -1472,6 +1480,84 @@ hr {
   background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 75%, transparent 75%, transparent);
   background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 75%, transparent 75%, transparent);
   background-size: 40px 40px;
+}
+
+div.marquee > div {
+  --fullwidth: -337em;
+  --marquee-width: calc(var(--fullwidth) - 100%);
+  height: 200px;
+  animation: marquee-certificates 45s linear infinite;
+}
+div.marquee > div:hover {
+  animation-play-state: paused;
+}
+div.marquee > div > a {
+  max-height: 200px;
+  height: 200px;
+  margin: 0 2em;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.2666666667);
+}
+div.marquee > div > a .verify-box {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 0 0 0 50px;
+  z-index: 1;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  /* inset: 0; */
+  transition: all 0.3s ease;
+  width: 0;
+  height: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+div.marquee > div > a:hover .verify-box {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  font-size: 2em;
+  padding: calc(50% - 2em) 0;
+  text-align: center;
+}
+div.marquee > div > a > img {
+  max-height: 100%;
+  height: 100%;
+}
+
+.marquee {
+  width: 100%;
+  line-height: 50px;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.marquee > * {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee-certificates {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(calc(-337em - 100%), 0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
