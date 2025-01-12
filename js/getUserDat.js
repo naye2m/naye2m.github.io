@@ -212,7 +212,7 @@ class userInfo {
 
         function get_project__html(proj) {
             return `<div class="col-md-3 text-center col-padding animate-box fadeInUp animated-fast">
-                    <a href="${proj.link}" class="work" style="background-image: url(${proj.image || "images/portfolio-1.jpg"});">
+                    <a href="${proj.link}" terget="_blank" class="work" style="background-image: url(${proj.image || "images/portfolio-1.jpg"});">
                         <div class="desc">
                             <h3>${proj.name}</h3>
                             <span>${proj.description}</span>
